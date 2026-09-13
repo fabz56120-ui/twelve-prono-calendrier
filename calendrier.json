@@ -2,6 +2,138 @@
     "source": "https://prod2.lnr.fr/calendrier-et-resultats",
     "saison": "2026-2027",
     "journees": {
+        "J1": [
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "Biarritz Olympique PB",
+                "exterieur": "Nissa Rugby",
+                "scoreDomicile": 36,
+                "scoreExterieur": 5
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "Colomiers Rugby",
+                "scoreDomicile": 38,
+                "scoreExterieur": 26
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "AS Béziers Hérault",
+                "exterieur": "Oyonnax Rugby",
+                "scoreDomicile": 21,
+                "scoreExterieur": 31
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "US Dax",
+                "exterieur": "RC Narbonnais",
+                "scoreDomicile": 57,
+                "scoreExterieur": 19
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "Stade Aurillacois",
+                "scoreDomicile": 57,
+                "scoreExterieur": 33
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "USON Nevers",
+                "exterieur": "US Montauban",
+                "scoreDomicile": 21,
+                "scoreExterieur": 25
+            },
+            {
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "domicile": "Provence Rugby",
+                "exterieur": "SU Agen",
+                "scoreDomicile": 44,
+                "scoreExterieur": 10
+            },
+            {
+                "journee": "J1",
+                "date": "VENDREDI 28 AOÛT",
+                "domicile": "CA Brive",
+                "exterieur": "Valence Romans",
+                "scoreDomicile": 23,
+                "scoreExterieur": 21
+            }
+        ],
+        "J2": [
+            {
+                "journee": "J2",
+                "date": "JEUDI 03 SEPTEMBRE",
+                "domicile": "Colomiers Rugby",
+                "exterieur": "Provence Rugby",
+                "scoreDomicile": 13,
+                "scoreExterieur": 18
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "US Montauban",
+                "exterieur": "FC Grenoble Rugby",
+                "scoreDomicile": 20,
+                "scoreExterieur": 17
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "Stade Aurillacois",
+                "exterieur": "US Dax",
+                "scoreDomicile": 65,
+                "scoreExterieur": 35
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "RC Narbonnais",
+                "exterieur": "USON Nevers",
+                "scoreDomicile": 28,
+                "scoreExterieur": 26
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "Nissa Rugby",
+                "exterieur": "AS Béziers Hérault",
+                "scoreDomicile": 43,
+                "scoreExterieur": 6
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "Oyonnax Rugby",
+                "exterieur": "Biarritz Olympique PB",
+                "scoreDomicile": 47,
+                "scoreExterieur": 25
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "Valence Romans",
+                "exterieur": "Soyaux-Angoulême XV",
+                "scoreDomicile": 39,
+                "scoreExterieur": 22
+            },
+            {
+                "journee": "J2",
+                "date": "VENDREDI 04 SEPTEMBRE",
+                "domicile": "SU Agen",
+                "exterieur": "CA Brive",
+                "scoreDomicile": 14,
+                "scoreExterieur": 37
+            }
+        ],
         "J3": [
             {
                 "journee": "J3",
@@ -67,6 +199,33 @@
                 "scoreDomicile": 33,
                 "scoreExterieur": 39
             }
-        ]
+        ],
+        "J4": [],
+        "J5": [],
+        "J6": [],
+        "J7": [],
+        "J8": [],
+        "J9": [],
+        "J10": [],
+        "J11": [],
+        "J12": [],
+        "J13": [],
+        "J14": [],
+        "J15": [],
+        "J16": [],
+        "J17": [],
+        "J18": [],
+        "J19": [],
+        "J20": [],
+        "J21": [],
+        "J22": [],
+        "J23": [],
+        "J24": [],
+        "J25": [],
+        "J26": [],
+        "J27": [],
+        "J28": [],
+        "J29": [],
+        "J30": []
     }
 }
