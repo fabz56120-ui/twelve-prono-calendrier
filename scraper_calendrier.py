@@ -29,7 +29,10 @@ def est_date(ligne):
         "DIMANCHE"
     ]
 
-    return any(jour in ligne.upper() for jour in jours)
+    return any(
+        jour in ligne.upper()
+        for jour in jours
+    )
 
 
 def est_score(ligne):
@@ -40,7 +43,12 @@ def est_score(ligne):
     ) is not None
 
 
-def ignorer_ligne(ligne):
+def est_match_futur(ligne):
+
+    return ligne.strip() == "-"
+
+
+def est_a_ignorer(ligne):
 
     mots = [
         "e",
@@ -61,6 +69,9 @@ def ignorer_ligne(ligne):
     if est_score(ligne):
         return True
 
+    if est_match_futur(ligne):
+        return True
+
     return False
 
 
@@ -72,7 +83,7 @@ def extraire_matchs(texte, journee):
 
     numero = journee.replace("J", "")
 
-    # Recherche du début de la journée
+    # Recherche de JOURNÉE X
     debut = None
 
     for i, ligne in enumerate(lignes):
@@ -88,12 +99,13 @@ def extraire_matchs(texte, journee):
 
         return matchs
 
-    # Recherche de la fin de la journée
+    # Fin de la zone de la journée
     fin = len(lignes)
 
     marqueurs_fin = [
         "LES AVANTAGES",
-        "NOS PARTENAIRES"
+        "NOS PARTENAIRES",
+        "BON PLAN"
     ]
 
     for i in range(debut, len(lignes)):
@@ -112,7 +124,10 @@ def extraire_matchs(texte, journee):
 
         ligne = contenu[index]
 
-        # Nouvelle date
+        # ----------------------------------------
+        # DATE
+        # ----------------------------------------
+
         if est_date(ligne):
 
             date_actuelle = ligne
@@ -120,51 +135,43 @@ def extraire_matchs(texte, journee):
             index += 1
             continue
 
-        # Recherche d'un score
+        # ----------------------------------------
+        # SCORE TERMINÉ
+        # Exemple : 38 - 20
+        # ----------------------------------------
+
         if est_score(ligne):
 
-            score = ligne
+            score_domicile, score_exterieur = [
+                int(x.strip())
+                for x in ligne.split("-")
+            ]
 
-            try:
-
-                score_domicile, score_exterieur = [
-                    int(x.strip())
-                    for x in score.split("-")
-                ]
-
-            except Exception:
-
-                index += 1
-                continue
-
-            # Équipe domicile :
-            # recherche en remontant avant le score
             domicile = None
+            exterieur = None
 
+            # Équipe domicile avant le score
             recherche = index - 1
 
             while recherche >= 0:
 
                 candidat = contenu[recherche]
 
-                if not ignorer_ligne(candidat):
+                if not est_a_ignorer(candidat):
 
                     domicile = candidat
                     break
 
                 recherche -= 1
 
-            # Équipe extérieure :
-            # recherche après le score
-            exterieur = None
-
+            # Équipe extérieure après le score
             recherche = index + 1
 
             while recherche < len(contenu):
 
                 candidat = contenu[recherche]
 
-                if not ignorer_ligne(candidat):
+                if not est_a_ignorer(candidat):
 
                     exterieur = candidat
                     break
@@ -180,6 +187,66 @@ def extraire_matchs(texte, journee):
                     "exterieur": exterieur,
                     "scoreDomicile": score_domicile,
                     "scoreExterieur": score_exterieur
+                })
+
+            index += 1
+            continue
+
+        # ----------------------------------------
+        # MATCH FUTUR
+        # Exemple :
+        #
+        # Equipe domicile
+        # 4
+        # e
+        #
+        # -
+        #
+        # Equipe extérieure
+        # ----------------------------------------
+
+        if est_match_futur(ligne):
+
+            domicile = None
+            exterieur = None
+
+            # Équipe domicile avant le "-"
+            recherche = index - 1
+
+            while recherche >= 0:
+
+                candidat = contenu[recherche]
+
+                if not est_a_ignorer(candidat):
+
+                    domicile = candidat
+                    break
+
+                recherche -= 1
+
+            # Équipe extérieure après le "-"
+            recherche = index + 1
+
+            while recherche < len(contenu):
+
+                candidat = contenu[recherche]
+
+                if not est_a_ignorer(candidat):
+
+                    exterieur = candidat
+                    break
+
+                recherche += 1
+
+            if domicile and exterieur:
+
+                matchs.append({
+                    "journee": journee,
+                    "date": date_actuelle,
+                    "domicile": domicile,
+                    "exterieur": exterieur,
+                    "scoreDomicile": None,
+                    "scoreExterieur": None
                 })
 
             index += 1
@@ -212,7 +279,6 @@ def trouver_select_journee(page):
                 for option in options
             ]
 
-            # Le select recherché contient J1 et J30
             if "J1" in options and "J30" in options:
 
                 return select
@@ -229,9 +295,9 @@ def cliquer_journee(page, journee):
 
     numero = journee.replace("J", "")
 
-    # =============================================
-    # MÉTHODE 1 : vrai élément SELECT
-    # =============================================
+    # ----------------------------------------
+    # Vrai SELECT
+    # ----------------------------------------
 
     select = trouver_select_journee(page)
 
@@ -261,13 +327,12 @@ def cliquer_journee(page, journee):
                 f"Erreur select {journee}: {erreur}"
             )
 
-    # =============================================
-    # MÉTHODE 2 : menu personnalisé
-    # =============================================
+    # ----------------------------------------
+    # Menu personnalisé
+    # ----------------------------------------
 
     try:
 
-        # Recherche du texte "Journée"
         labels = page.get_by_text(
             "Journée",
             exact=True
@@ -277,53 +342,42 @@ def cliquer_journee(page, journee):
 
             label = labels.nth(i)
 
-            try:
+            if not label.is_visible():
+                continue
 
-                if not label.is_visible():
+            label.click()
+
+            page.wait_for_timeout(500)
+
+            options = page.get_by_text(
+                journee,
+                exact=True
+            )
+
+            for j in range(options.count()):
+
+                option = options.nth(j)
+
+                if not option.is_visible():
                     continue
 
-                # Clique sur le conteneur
-                label.click()
+                option.scroll_into_view_if_needed()
 
-                page.wait_for_timeout(1000)
+                option.click()
 
-                # Maintenant recherche uniquement
-                # les éléments visibles correspondant à J1
-                options = page.get_by_text(
-                    journee,
-                    exact=True
-                )
+                page.wait_for_timeout(2500)
 
-                for j in range(options.count()):
+                texte = page.locator(
+                    "body"
+                ).inner_text()
 
-                    option = options.nth(j)
+                if f"JOURNÉE {numero}" in texte:
 
-                    if not option.is_visible():
-                        continue
+                    print(
+                        f"✓ {journee} sélectionnée"
+                    )
 
-                    option.scroll_into_view_if_needed()
-
-                    option.click()
-
-                    page.wait_for_timeout(2500)
-
-                    texte = page.locator(
-                        "body"
-                    ).inner_text()
-
-                    if (
-                        f"JOURNÉE {numero}"
-                        in texte
-                    ):
-
-                        print(
-                            f"✓ {journee} sélectionnée"
-                        )
-
-                        return True
-
-            except Exception:
-                pass
+                    return True
 
     except Exception:
         pass
@@ -366,25 +420,9 @@ def main():
             timeout=60000
         )
 
-        # Laisse le JavaScript charger
         page.wait_for_timeout(5000)
 
         print("Page chargée.")
-
-        # Sauvegarde du HTML pour debug si besoin
-        with open(
-            "debug_calendrier.html",
-            "w",
-            encoding="utf-8"
-        ) as fichier:
-
-            fichier.write(
-                page.content()
-            )
-
-        # =============================================
-        # BOUCLE SUR TOUTES LES JOURNÉES
-        # =============================================
 
         for journee in JOURNEES:
 
@@ -417,7 +455,7 @@ def main():
                 f"✓ {len(matchs)} match(s) récupéré(s)"
             )
 
-            # Sauvegarde après chaque journée
+            # Sauvegarde progressive
             with open(
                 "calendrier.json",
                 "w",
@@ -431,23 +469,9 @@ def main():
                     indent=4
                 )
 
-        # Debug texte final
-        with open(
-            "debug_calendrier.txt",
-            "w",
-            encoding="utf-8"
-        ) as fichier:
-
-            fichier.write(
-                page.locator(
-                    "body"
-                ).inner_text()
-            )
-
         browser.close()
 
-    # Sauvegarde finale même si aucune journée
-    # n'a été récupérée
+    # Sauvegarde finale
     with open(
         "calendrier.json",
         "w",
