@@ -1,5 +1,4 @@
 from playwright.sync_api import sync_playwright
-import json
 
 
 URL = "https://prod2.lnr.fr/calendrier-resultats"
@@ -25,9 +24,25 @@ def main():
 
         print("Page HTML chargée.")
 
+        # Sauvegarde le HTML complet
+        html = page.content()
+
+        with open(
+            "debug_calendrier.html",
+            "w",
+            encoding="utf-8"
+        ) as fichier:
+
+            fichier.write(html)
+
+        print(
+            "Fichier debug_calendrier.html créé."
+        )
+
+
+        # Garde également le texte pour comparaison
         texte = page.locator("body").inner_text()
 
-        # Sauvegarde du debug
         with open(
             "debug_calendrier.txt",
             "w",
@@ -36,27 +51,9 @@ def main():
 
             fichier.write(texte)
 
-        # Pour l'instant, création du fichier JSON
-        donnees = {
-            "source": URL,
-            "calendrier": []
-        }
-
-        with open(
-            "calendrier.json",
-            "w",
-            encoding="utf-8"
-        ) as fichier:
-
-            json.dump(
-                donnees,
-                fichier,
-                ensure_ascii=False,
-                indent=4
-            )
-
-        print("debug_calendrier.txt créé.")
-        print("calendrier.json créé.")
+        print(
+            "Fichier debug_calendrier.txt créé."
+        )
 
         browser.close()
 
