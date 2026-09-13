@@ -137,70 +137,6 @@
         "J3": [
             {
                 "journee": "J3",
-                "date": null,
-                "domicile": "10/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 38,
-                "scoreExterieur": 20
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 45,
-                "scoreExterieur": 7
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 38,
-                "scoreExterieur": 17
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 47,
-                "scoreExterieur": 42
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 27,
-                "scoreExterieur": 20
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 21,
-                "scoreExterieur": 20
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "11/09",
-                "scoreDomicile": 52,
-                "scoreExterieur": 17
-            },
-            {
-                "journee": "J3",
-                "date": null,
-                "domicile": "11/09",
-                "exterieur": "CALENDRIER ET RÉSULTATS",
-                "scoreDomicile": 33,
-                "scoreExterieur": 39
-            },
-            {
-                "journee": "J3",
                 "date": "JEUDI 10 SEPTEMBRE",
                 "domicile": "Biarritz Olympique PB",
                 "exterieur": "Colomiers Rugby",
@@ -264,9 +200,204 @@
                 "scoreExterieur": 39
             }
         ],
-        "J4": [],
-        "J5": [],
-        "J6": [],
+        "J4": [
+            {
+                "journee": "J4",
+                "date": "JEUDI 17 SEPTEMBRE",
+                "domicile": "Stade Aurillacois",
+                "exterieur": "CA Brive",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "Nissa Rugby",
+                "exterieur": "FC Grenoble Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "Colomiers Rugby",
+                "exterieur": "US Dax",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "US Montauban",
+                "exterieur": "AS Béziers Hérault",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "RC Narbonnais",
+                "exterieur": "Soyaux-Angoulême XV",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "USON Nevers",
+                "exterieur": "Biarritz Olympique PB",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "Valence Romans",
+                "exterieur": "Provence Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J4",
+                "date": "VENDREDI 18 SEPTEMBRE",
+                "domicile": "SU Agen",
+                "exterieur": "Oyonnax Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            }
+        ],
+        "J5": [
+            {
+                "journee": "J5",
+                "date": "JEUDI 24 SEPTEMBRE",
+                "domicile": "CA Brive",
+                "exterieur": "Colomiers Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "AS Béziers Hérault",
+                "exterieur": "RC Narbonnais",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "Provence Rugby",
+                "exterieur": "Stade Aurillacois",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "SU Agen",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "Biarritz Olympique PB",
+                "exterieur": "US Montauban",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "US Dax",
+                "exterieur": "Nissa Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "Oyonnax Rugby",
+                "exterieur": "USON Nevers",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J5",
+                "date": "VENDREDI 25 SEPTEMBRE",
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "Valence Romans",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            }
+        ],
+        "J6": [
+            {
+                "journee": "J6",
+                "date": "JEUDI 08 OCTOBRE",
+                "domicile": "US Montauban",
+                "exterieur": "CA Brive",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "Provence Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "SU Agen",
+                "exterieur": "US Dax",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "RC Narbonnais",
+                "exterieur": "Oyonnax Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "Nissa Rugby",
+                "exterieur": "USON Nevers",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "Valence Romans",
+                "exterieur": "AS Béziers Hérault",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "Stade Aurillacois",
+                "exterieur": "Biarritz Olympique PB",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J6",
+                "date": "VENDREDI 09 OCTOBRE",
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "Colomiers Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            }
+        ],
         "J7": [
             {
                 "journee": "J7",
