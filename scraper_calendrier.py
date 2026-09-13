@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 
 
-URL = "https://prod2.lnr.fr/calendrier-resultats"
+URL = "https://prod2.lnr.fr/calendrier-et-resultats"
 
 
 def main():
