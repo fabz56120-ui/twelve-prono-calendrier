@@ -1,93 +1,29 @@
 from playwright.sync_api import sync_playwright
 import json
 import re
+import time
 
 
 URL = "https://prod2.lnr.fr/calendrier-et-resultats"
 
-
-# =========================================================
-# CLUBS PRO D2
-# =========================================================
-
-CLUBS = [
-    "Biarritz Olympique PB",
-    "Colomiers Rugby",
-    "Soyaux-Angoulême XV",
-    "US Montauban",
-    "Provence Rugby",
-    "RC Narbonnais",
-    "AS Béziers Hérault",
-    "USON Nevers",
-    "CA Brive",
-    "Nissa Rugby",
-    "US Dax",
-    "Valence Romans",
-    "Oyonnax Rugby",
-    "Stade Aurillacois",
-    "FC Grenoble Rugby",
-    "SU Agen"
-]
+JOURNEES = [f"J{i}" for i in range(1, 31)]
 
 
-# =========================================================
-# EXTRACTION D'UNE JOURNEE
-# =========================================================
+def nettoyer_lignes(texte):
 
-def extraire_matchs(texte, numero_journee):
+    lignes = []
 
-    lignes = [
-        ligne.strip()
-        for ligne in texte.splitlines()
-        if ligne.strip()
-    ]
+    for ligne in texte.splitlines():
 
-    # Cherche la vraie section JOURNÉE X
-    debut = None
+        ligne = ligne.strip()
 
-    for i, ligne in enumerate(lignes):
+        if ligne:
+            lignes.append(ligne)
 
-        if ligne == f"JOURNÉE {numero_journee}":
-
-            debut = i
-            break
-
-    if debut is None:
-
-        print(
-            f"⚠ JOURNÉE {numero_journee} introuvable"
-        )
-
-        return []
+    return lignes
 
 
-    # On garde uniquement le contenu après JOURNÉE X
-    lignes = lignes[debut + 1:]
-
-
-    # On s'arrête avant la publicité
-    fin = len(lignes)
-
-    for i, ligne in enumerate(lignes):
-
-        if ligne == "LES AVANTAGES":
-
-            fin = i
-            break
-
-    lignes = lignes[:fin]
-
-
-    # -----------------------------------------------------
-    # EXTRACTION DES MATCHS
-    # -----------------------------------------------------
-
-    matchs = []
-
-    date_actuelle = None
-
-    equipes_en_attente = []
-
+def est_date(ligne):
 
     jours = [
         "LUNDI",
@@ -99,164 +35,218 @@ def extraire_matchs(texte, numero_journee):
         "DIMANCHE"
     ]
 
-
-    for ligne in lignes:
-
-
-        # -------------------------
-        # DATE
-        # -------------------------
-
-        if any(
-            ligne.startswith(jour)
-            for jour in jours
-        ):
-
-            date_actuelle = ligne
-
-            continue
+    return any(jour in ligne.upper() for jour in jours)
 
 
-        # -------------------------
-        # EQUIPE
-        # -------------------------
+def est_score(ligne):
 
-        if ligne in CLUBS:
-
-            equipes_en_attente.append(ligne)
+    return re.match(r"^\d+\s*-\s*\d+$", ligne) is not None
 
 
-            if len(equipes_en_attente) == 2:
+def nettoyer_nom_equipe(ligne):
 
-                matchs.append({
+    a_ignorer = [
+        "e",
+        "Bo",
+        "Bd",
+        "Feuille de match",
+        "Voir le résumé",
+        "Billetterie",
+        "Covoiturer"
+    ]
 
-                    "journee":
-                        f"J{numero_journee}",
+    if ligne in a_ignorer:
+        return None
 
-                    "date":
-                        date_actuelle,
+    if re.match(r"^\d+$", ligne):
+        return None
 
-                    "domicile":
-                        equipes_en_attente[0],
+    if est_score(ligne):
+        return None
 
-                    "exterieur":
-                        equipes_en_attente[1],
-
-                    "scoreDomicile":
-                        None,
-
-                    "scoreExterieur":
-                        None
-                })
-
-
-                equipes_en_attente = []
+    return ligne
 
 
-    # -----------------------------------------------------
-    # SCORES
-    # -----------------------------------------------------
+def extraire_matchs(texte, journee):
 
-    scores = []
+    lignes = nettoyer_lignes(texte)
 
+    matchs = []
 
-    for ligne in lignes:
+    numero_journee = journee.replace("J", "")
 
-        resultat = re.match(
-            r"^(\d+)\s*-\s*(\d+)$",
-            ligne
-        )
+    debut = None
 
+    for i, ligne in enumerate(lignes):
 
-        if resultat:
-
-            scores.append(
-
-                (
-                    int(resultat.group(1)),
-                    int(resultat.group(2))
-                )
-            )
-
-
-    # Attribution des scores dans l'ordre
-    for i, score in enumerate(scores):
-
-        if i >= len(matchs):
-
+        if ligne.upper() == f"JOURNÉE {numero_journee}":
+            debut = i
             break
 
+    if debut is None:
+        print(f"⚠ JOURNÉE {journee} introuvable")
+        return matchs
 
-        matchs[i]["scoreDomicile"] = score[0]
+    fin = len(lignes)
 
-        matchs[i]["scoreExterieur"] = score[1]
+    mots_fin = [
+        "LES AVANTAGES",
+        "NOS PARTENAIRES",
+        "BON PLAN"
+    ]
 
+    for i in range(debut + 1, len(lignes)):
+
+        if lignes[i] in mots_fin:
+            fin = i
+            break
+
+    lignes = lignes[debut + 1:fin]
+
+    date_actuelle = None
+    index = 0
+
+    while index < len(lignes):
+
+        ligne = lignes[index]
+
+        if est_date(ligne):
+
+            date_actuelle = ligne
+            index += 1
+            continue
+
+        if est_score(ligne):
+
+            score = ligne
+
+            try:
+
+                score_domicile, score_exterieur = [
+                    int(x.strip())
+                    for x in score.split("-")
+                ]
+
+            except:
+                index += 1
+                continue
+
+            domicile = None
+
+            # Recherche équipe domicile avant le score
+            recherche = index - 1
+
+            while recherche >= 0:
+
+                candidat = nettoyer_nom_equipe(
+                    lignes[recherche]
+                )
+
+                if candidat:
+
+                    domicile = candidat
+                    break
+
+                recherche -= 1
+
+            exterieur = None
+
+            # Recherche équipe extérieure après le score
+            recherche = index + 1
+
+            while recherche < len(lignes):
+
+                candidat = nettoyer_nom_equipe(
+                    lignes[recherche]
+                )
+
+                if candidat:
+
+                    exterieur = candidat
+                    break
+
+                recherche += 1
+
+            if domicile and exterieur:
+
+                match = {
+                    "journee": journee,
+                    "date": date_actuelle,
+                    "domicile": domicile,
+                    "exterieur": exterieur,
+                    "scoreDomicile": score_domicile,
+                    "scoreExterieur": score_exterieur
+                }
+
+                matchs.append(match)
+
+            index += 1
+            continue
+
+        index += 1
 
     return matchs
 
 
-# =========================================================
-# SELECTION D'UNE JOURNEE
-# =========================================================
+def cliquer_journee(page, journee):
 
-def selectionner_journee(
-    page,
-    numero
-):
+    print(f"Sélection de {journee}...")
 
-    journee = f"J{numero}"
+    numero = journee.replace("J", "")
 
-    print(
-        f"\nSélection de {journee}..."
-    )
+    selecteurs = [
+        f"xpath=//*[normalize-space(text())='{journee}']",
+        f"xpath=//*[@role='option' and normalize-space(.)='{journee}']",
+        f"xpath=//button[normalize-space(.)='{journee}']",
+        f"xpath=//*[normalize-space(.)='{journee}']"
+    ]
 
-
-    # Tous les éléments qui affichent J1, J2, etc.
-    elements = page.get_by_text(
-        journee,
-        exact=True
-    )
-
-
-    for i in range(elements.count()):
-
-        element = elements.nth(i)
+    for selecteur in selecteurs:
 
         try:
 
-            if element.is_visible():
+            elements = page.locator(selecteur)
 
-                # Clic sur la journée
-                element.click()
+            total = elements.count()
 
-                # Attend le changement réel du contenu
-                page.wait_for_function(
-                    """
-                    (numero) => {
-                        return document.body.innerText.includes(
-                            "JOURNÉE " + numero
-                        );
-                    }
-                    """,
-                    numero,
-                    timeout=10000
-                )
+            for i in range(total):
 
+                element = elements.nth(i)
 
-                page.wait_for_timeout(1000)
+                try:
 
+                    if element.is_visible():
 
-                print(
-                    f"✓ JOURNÉE {numero} chargée"
-                )
+                        # Scroll jusqu'à l'élément
+                        element.scroll_into_view_if_needed()
 
-                return True
+                        # Clic JavaScript pour les éléments custom
+                        element.evaluate(
+                            "(el) => el.click()"
+                        )
 
+                        # Attente du chargement
+                        page.wait_for_timeout(1500)
 
-        except Exception as erreur:
+                        texte = page.locator(
+                            "body"
+                        ).inner_text()
 
-            continue
+                        if (
+                            f"JOURNÉE {numero}" in texte
+                        ):
 
+                            print(
+                                f"✓ {journee} sélectionnée"
+                            )
+
+                            return True
+
+                except:
+                    pass
+
+        except:
+            pass
 
     print(
         f"⚠ Impossible de sélectionner {journee}"
@@ -265,37 +255,24 @@ def selectionner_journee(
     return False
 
 
-# =========================================================
-# PROGRAMME PRINCIPAL
-# =========================================================
-
 def main():
 
     print(
         "Ouverture du calendrier officiel..."
     )
 
-
-    calendrier_complet = {
-
-        "source": URL,
-
-        "saison": "2026-2027",
-
-        "journees": {}
-    }
-
-
     with sync_playwright() as p:
-
 
         browser = p.chromium.launch(
             headless=True
         )
 
-
-        page = browser.new_page()
-
+        page = browser.new_page(
+            viewport={
+                "width": 1920,
+                "height": 1080
+            }
+        )
 
         page.goto(
             URL,
@@ -303,102 +280,90 @@ def main():
             timeout=60000
         )
 
+        page.wait_for_timeout(5000)
 
-        page.wait_for_timeout(
-            5000
-        )
+        print("Page chargée.")
 
+        calendrier = {
+            "source": URL,
+            "saison": "2026-2027",
+            "journees": {}
+        }
 
-        print(
-            "Page chargée."
-        )
+        for journee in JOURNEES:
 
+            print("")
+            print(
+                "================================="
+            )
 
-        # =================================================
-        # RECUPERATION J1 → J30
-        # =================================================
-
-        for numero in range(1, 31):
-
-
-            if not selectionner_journee(
+            selection_ok = cliquer_journee(
                 page,
-                numero
-            ):
+                journee
+            )
+
+            if not selection_ok:
 
                 continue
-
 
             texte = page.locator(
                 "body"
             ).inner_text()
 
-
             matchs = extraire_matchs(
                 texte,
-                numero
+                journee
             )
 
-
-            calendrier_complet[
-                "journees"
-            ][f"J{numero}"] = matchs
-
+            calendrier["journees"][journee] = matchs
 
             print(
-                f"✓ J{numero} : "
-                f"{len(matchs)} matchs récupérés"
+                f"✓ {len(matchs)} match(s) récupéré(s)"
             )
 
+            # Sauvegarde après chaque journée
+            with open(
+                "calendrier.json",
+                "w",
+                encoding="utf-8"
+            ) as fichier:
 
-        # =================================================
-        # SAUVEGARDE JSON
-        # =================================================
+                json.dump(
+                    calendrier,
+                    fichier,
+                    ensure_ascii=False,
+                    indent=4
+                )
 
-        with open(
-            "calendrier.json",
-            "w",
-            encoding="utf-8"
-        ) as fichier:
+        # Sauvegarde debug finale
+        texte_final = page.locator(
+            "body"
+        ).inner_text()
 
-
-            json.dump(
-                calendrier_complet,
-                fichier,
-                ensure_ascii=False,
-                indent=4
-            )
-
-
-        print(
-            "\n================================="
-        )
-
-        print(
-            "✓ calendrier.json créé"
-        )
-
-        print(
-            "================================="
-        )
-
-
-        # Debug de la dernière page affichée
         with open(
             "debug_calendrier.txt",
             "w",
             encoding="utf-8"
         ) as fichier:
 
-
             fichier.write(
-                page.locator(
-                    "body"
-                ).inner_text()
+                texte_final
             )
 
-
         browser.close()
+
+    print("")
+    print(
+        "================================="
+    )
+
+    print(
+        "✓ calendrier.json créé"
+    )
+
+    print(
+        "================================="
+    )
 
 
 if __name__ == "__main__":
