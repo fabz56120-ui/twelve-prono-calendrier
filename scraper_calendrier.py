@@ -17,33 +17,21 @@ def main():
         page = browser.new_page()
 
         page.goto(
-    URL,
-    wait_until="domcontentloaded",
-    timeout=60000
-)
+            URL,
+            wait_until="domcontentloaded",
+            timeout=60000
+        )
 
-page.wait_for_timeout(5000)
+        # On laisse le temps au JavaScript du site de charger
+        page.wait_for_timeout(5000)
 
         print("Page HTML chargée.")
 
-        # Sauvegarde le HTML complet
-        html = page.content()
-
-        with open(
-            "debug_calendrier.html",
-            "w",
-            encoding="utf-8"
-        ) as fichier:
-
-            fichier.write(html)
+        texte = page.locator("body").inner_text()
 
         print(
-            "Fichier debug_calendrier.html créé."
+            f"{len(texte.splitlines())} lignes trouvées."
         )
-
-
-        # Garde également le texte pour comparaison
-        texte = page.locator("body").inner_text()
 
         with open(
             "debug_calendrier.txt",
