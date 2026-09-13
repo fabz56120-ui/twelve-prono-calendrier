@@ -6,10 +6,32 @@ import re
 BASE_URL = "https://prod2.lnr.fr/calendrier-et-resultats/2026-2027"
 
 
+EQUIPES = [
+    "Biarritz Olympique PB",
+    "Colomiers Rugby",
+    "Soyaux-Angoulême XV",
+    "US Montauban",
+    "Provence Rugby",
+    "RC Narbonnais",
+    "AS Béziers Hérault",
+    "USON Nevers",
+    "CA Brive",
+    "Nissa Rugby",
+    "US Dax",
+    "Valence Romans",
+    "Oyonnax Rugby",
+    "Stade Aurillacois",
+    "FC Grenoble Rugby",
+    "SU Agen"
+]
+
+
 def nettoyer_lignes(texte):
+
     lignes = []
 
     for ligne in texte.splitlines():
+
         ligne = ligne.strip()
 
         if ligne:
@@ -18,163 +40,160 @@ def nettoyer_lignes(texte):
     return lignes
 
 
-def est_score(texte):
+def extraire_section_journee(texte, numero):
+
+    titre = f"JOURNÉE {numero}"
+
+    # On prend la dernière occurrence.
+    # Cela évite le petit résumé des résultats présent en haut du site.
+    position = texte.rfind(titre)
+
+    if position == -1:
+        return ""
+
+    section = texte[position:]
+
+    # On coupe avant les éléments qui ne font plus partie du calendrier
+    marqueurs_fin = [
+        "LES AVANTAGES",
+        "NOS PARTENAIRES",
+        "BON PLAN"
+    ]
+
+    for marqueur in marqueurs_fin:
+
+        position_fin = section.find(marqueur)
+
+        if position_fin != -1:
+
+            section = section[:position_fin]
+
+    return section
+
+
+def est_une_date(texte):
+
+    jours = [
+        "LUNDI",
+        "MARDI",
+        "MERCREDI",
+        "JEUDI",
+        "VENDREDI",
+        "SAMEDI",
+        "DIMANCHE"
+    ]
+
+    return any(texte.startswith(jour) for jour in jours)
+
+
+def est_un_score(texte):
+
     return re.match(r"^\d+\s*-\s*\d+$", texte) is not None
 
 
-def recuperer_matchs(texte, journee):
-    lignes = nettoyer_lignes(texte)
+def extraire_matchs(texte, numero):
+
+    section = extraire_section_journee(
+        texte,
+        numero
+    )
+
+    if not section:
+        return []
+
+    lignes = nettoyer_lignes(section)
 
     matchs = []
 
-    # On cherche le début de la journée
-    debut = -1
-
-    for i, ligne in enumerate(lignes):
-
-        if (
-            ligne.upper() == f"JOURNÉE {journee}"
-            or ligne.upper() == f"J{journee}"
-        ):
-            debut = i
-            break
-
-    if debut == -1:
-        print(f"⚠ Journée J{journee} introuvable dans la page")
-        return []
-
-    lignes = lignes[debut:]
-
     date_actuelle = None
-    i = 0
 
-    while i < len(lignes):
+    equipes_trouvees = []
+    score_en_attente = None
 
-        ligne = lignes[i]
+    for ligne in lignes:
 
-        # Arrêt lorsqu'on arrive au bas de la page
-        if ligne in [
-            "LES AVANTAGES",
-            "NOS PARTENAIRES",
-            "BONS PLANS, CONTENUS EXCLUSIFS,"
-        ]:
-            break
+        # On mémorise la date actuelle
+        if est_une_date(ligne):
 
-        # Une date est généralement en majuscules
-        if (
-            ligne.startswith("JEUDI")
-            or ligne.startswith("VENDREDI")
-            or ligne.startswith("SAMEDI")
-            or ligne.startswith("DIMANCHE")
-            or ligne.startswith("LUNDI")
-        ):
             date_actuelle = ligne
-            i += 1
             continue
 
-        # Recherche d'un score
-        if est_score(ligne):
+        # On détecte un score
+        if est_un_score(ligne):
 
-            score = ligne.split("-")
+            morceaux = re.split(
+                r"\s*-\s*",
+                ligne
+            )
 
-            score_domicile = int(score[0].strip())
-            score_exterieur = int(score[1].strip())
+            score_en_attente = (
+                int(morceaux[0]),
+                int(morceaux[1])
+            )
 
-            # Recherche équipe domicile avant le score
-            domicile = None
+            continue
 
-            for j in range(i - 1, max(i - 8, -1), -1):
+        # On ignore les matchs futurs sans score
+        if ligne == "-":
 
-                candidat = lignes[j]
+            score_en_attente = None
+            continue
 
-                if (
-                    candidat not in ["e", "Bo", "Bd"]
-                    and not candidat.isdigit()
-                    and not est_score(candidat)
-                ):
-                    domicile = candidat
-                    break
+        # On détecte les équipes
+        if ligne in EQUIPES:
 
-            # Recherche équipe extérieure après le score
-            exterieur = None
+            equipes_trouvees.append(ligne)
 
-            for j in range(i + 1, min(i + 8, len(lignes))):
+            # Dès qu'on a deux équipes,
+            # on peut créer un match
+            if len(equipes_trouvees) == 2:
 
-                candidat = lignes[j]
+                domicile = equipes_trouvees[0]
+                exterieur = equipes_trouvees[1]
 
-                if candidat == "Feuille de match":
-                    break
-
-                if (
-                    candidat not in ["e", "Bo", "Bd"]
-                    and not candidat.isdigit()
-                    and not est_score(candidat)
-                    and not candidat.startswith("Voir le résumé")
-                ):
-                    exterieur = candidat
-                    break
-
-            if domicile and exterieur:
-
-                matchs.append({
-                    "journee": f"J{journee}",
-                    "date": date_actuelle,
-                    "domicile": domicile,
-                    "exterieur": exterieur,
-                    "scoreDomicile": score_domicile,
-                    "scoreExterieur": score_exterieur
-                })
-
-        # Match futur : score "-"
-        elif ligne == "-":
-
-            domicile = None
-            exterieur = None
-
-            for j in range(i - 1, max(i - 8, -1), -1):
-
-                candidat = lignes[j]
-
-                if (
-                    candidat not in ["e", "Bo", "Bd"]
-                    and not candidat.isdigit()
-                ):
-                    domicile = candidat
-                    break
-
-            for j in range(i + 1, min(i + 8, len(lignes))):
-
-                candidat = lignes[j]
-
-                if candidat == "Feuille de match":
-                    break
-
-                if (
-                    candidat not in ["e", "Bo", "Bd"]
-                    and not candidat.isdigit()
-                ):
-                    exterieur = candidat
-                    break
-
-            if domicile and exterieur:
-
-                matchs.append({
-                    "journee": f"J{journee}",
+                match = {
+                    "journee": f"J{numero}",
                     "date": date_actuelle,
                     "domicile": domicile,
                     "exterieur": exterieur,
                     "scoreDomicile": None,
                     "scoreExterieur": None
-                })
+                }
 
-        i += 1
+                if score_en_attente is not None:
 
-    return matchs
+                    match["scoreDomicile"] = score_en_attente[0]
+                    match["scoreExterieur"] = score_en_attente[1]
+
+                matchs.append(match)
+
+                equipes_trouvees = []
+                score_en_attente = None
+
+    # Sécurité supplémentaire :
+    # suppression des doublons éventuels
+    matchs_uniques = []
+    deja_vus = set()
+
+    for match in matchs:
+
+        cle = (
+            match["journee"],
+            match["domicile"],
+            match["exterieur"]
+        )
+
+        if cle not in deja_vus:
+
+            deja_vus.add(cle)
+            matchs_uniques.append(match)
+
+    return matchs_uniques
 
 
 def main():
 
-    print("Ouverture du calendrier PRO D2...")
+    print("Ouverture du calendrier officiel...")
 
     calendrier = {
         "source": "https://prod2.lnr.fr/calendrier-et-resultats",
@@ -195,9 +214,13 @@ def main():
             print()
             print("=================================")
             print()
-            print(f"Récupération de J{numero}...")
+            print(
+                f"Récupération de J{numero}..."
+            )
 
-            url = f"{BASE_URL}/j{numero}"
+            url = (
+                f"{BASE_URL}/j{numero}"
+            )
 
             try:
 
@@ -207,16 +230,21 @@ def main():
                     timeout=60000
                 )
 
+                # Laisse le JavaScript charger
                 page.wait_for_timeout(3000)
 
-                texte = page.locator("body").inner_text()
+                texte = page.locator(
+                    "body"
+                ).inner_text()
 
-                matchs = recuperer_matchs(
+                matchs = extraire_matchs(
                     texte,
                     numero
                 )
 
-                calendrier["journees"][f"J{numero}"] = matchs
+                calendrier["journees"][
+                    f"J{numero}"
+                ] = matchs
 
                 print(
                     f"✓ {len(matchs)} match(s) récupéré(s)"
@@ -225,10 +253,12 @@ def main():
             except Exception as erreur:
 
                 print(
-                    f"⚠ Erreur J{numero} : {erreur}"
+                    f"⚠ Erreur sur J{numero} : {erreur}"
                 )
 
-                calendrier["journees"][f"J{numero}"] = []
+                calendrier["journees"][
+                    f"J{numero}"
+                ] = []
 
         browser.close()
 
