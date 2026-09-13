@@ -7,7 +7,7 @@ URL = "https://prod2.lnr.fr/calendrier-et-resultats"
 
 
 # =========================================================
-# LISTE DES CLUBS
+# CLUBS PRO D2
 # =========================================================
 
 CLUBS = [
@@ -36,16 +36,13 @@ CLUBS = [
 
 def extraire_matchs(texte, numero_journee):
 
-    lignes = []
+    lignes = [
+        ligne.strip()
+        for ligne in texte.splitlines()
+        if ligne.strip()
+    ]
 
-    for ligne in texte.splitlines():
-
-        ligne = ligne.strip()
-
-        if ligne:
-            lignes.append(ligne)
-
-    # Recherche de la vraie section JOURNÉE X
+    # Cherche la vraie section JOURNÉE X
     debut = None
 
     for i, ligne in enumerate(lignes):
@@ -63,9 +60,12 @@ def extraire_matchs(texte, numero_journee):
 
         return []
 
-    # On garde uniquement la journée
+
+    # On garde uniquement le contenu après JOURNÉE X
     lignes = lignes[debut + 1:]
 
+
+    # On s'arrête avant la publicité
     fin = len(lignes)
 
     for i, ligne in enumerate(lignes):
@@ -78,15 +78,16 @@ def extraire_matchs(texte, numero_journee):
     lignes = lignes[:fin]
 
 
-    # -----------------------------------------------
-    # RECUPERATION DES DATES ET CLUBS
-    # -----------------------------------------------
+    # -----------------------------------------------------
+    # EXTRACTION DES MATCHS
+    # -----------------------------------------------------
 
     matchs = []
 
     date_actuelle = None
 
     equipes_en_attente = []
+
 
     jours = [
         "LUNDI",
@@ -98,9 +99,14 @@ def extraire_matchs(texte, numero_journee):
         "DIMANCHE"
     ]
 
+
     for ligne in lignes:
 
-        # Date
+
+        # -------------------------
+        # DATE
+        # -------------------------
+
         if any(
             ligne.startswith(jour)
             for jour in jours
@@ -111,14 +117,15 @@ def extraire_matchs(texte, numero_journee):
             continue
 
 
-        # Equipe
+        # -------------------------
+        # EQUIPE
+        # -------------------------
+
         if ligne in CLUBS:
 
-            equipes_en_attente.append(
-                ligne
-            )
+            equipes_en_attente.append(ligne)
 
-            # Dès qu'on a 2 équipes = 1 match
+
             if len(equipes_en_attente) == 2:
 
                 matchs.append({
@@ -142,14 +149,16 @@ def extraire_matchs(texte, numero_journee):
                         None
                 })
 
+
                 equipes_en_attente = []
 
 
-    # -----------------------------------------------
-    # RECUPERATION DES SCORES
-    # -----------------------------------------------
+    # -----------------------------------------------------
+    # SCORES
+    # -----------------------------------------------------
 
     scores = []
+
 
     for ligne in lignes:
 
@@ -157,6 +166,7 @@ def extraire_matchs(texte, numero_journee):
             r"^(\d+)\s*-\s*(\d+)$",
             ligne
         )
+
 
         if resultat:
 
@@ -173,9 +183,12 @@ def extraire_matchs(texte, numero_journee):
     for i, score in enumerate(scores):
 
         if i >= len(matchs):
+
             break
 
+
         matchs[i]["scoreDomicile"] = score[0]
+
         matchs[i]["scoreExterieur"] = score[1]
 
 
@@ -183,20 +196,27 @@ def extraire_matchs(texte, numero_journee):
 
 
 # =========================================================
-# SELECTION JOURNEE
+# SELECTION D'UNE JOURNEE
 # =========================================================
 
-def selectionner_journee(page, journee):
+def selectionner_journee(
+    page,
+    numero
+):
+
+    journee = f"J{numero}"
 
     print(
-        f"Sélection de {journee}"
+        f"\nSélection de {journee}..."
     )
 
-    # Recherche des éléments exacts J1, J2, etc.
+
+    # Tous les éléments qui affichent J1, J2, etc.
     elements = page.get_by_text(
         journee,
         exact=True
     )
+
 
     for i in range(elements.count()):
 
@@ -206,15 +226,36 @@ def selectionner_journee(page, journee):
 
             if element.is_visible():
 
+                # Clic sur la journée
                 element.click()
 
-                page.wait_for_timeout(1500)
+                # Attend le changement réel du contenu
+                page.wait_for_function(
+                    """
+                    (numero) => {
+                        return document.body.innerText.includes(
+                            "JOURNÉE " + numero
+                        );
+                    }
+                    """,
+                    numero,
+                    timeout=10000
+                )
+
+
+                page.wait_for_timeout(1000)
+
+
+                print(
+                    f"✓ JOURNÉE {numero} chargée"
+                )
 
                 return True
 
-        except Exception:
 
-            pass
+        except Exception as erreur:
+
+            continue
 
 
     print(
@@ -234,6 +275,7 @@ def main():
         "Ouverture du calendrier officiel..."
     )
 
+
     calendrier_complet = {
 
         "source": URL,
@@ -246,50 +288,42 @@ def main():
 
     with sync_playwright() as p:
 
+
         browser = p.chromium.launch(
             headless=True
         )
 
+
         page = browser.new_page()
 
+
         page.goto(
-
             URL,
-
             wait_until="domcontentloaded",
-
             timeout=60000
         )
+
 
         page.wait_for_timeout(
             5000
         )
 
 
-        # -----------------------------------------------
-        # J1 A J30
-        # -----------------------------------------------
+        print(
+            "Page chargée."
+        )
+
+
+        # =================================================
+        # RECUPERATION J1 → J30
+        # =================================================
 
         for numero in range(1, 31):
-
-            journee = f"J{numero}"
-
-            print(
-                f"\n===================="
-            )
-
-            print(
-                f"RECUPERATION {journee}"
-            )
-
-            print(
-                f"===================="
-            )
 
 
             if not selectionner_journee(
                 page,
-                journee
+                numero
             ):
 
                 continue
@@ -308,62 +342,36 @@ def main():
 
             calendrier_complet[
                 "journees"
-            ][journee] = matchs
+            ][f"J{numero}"] = matchs
 
 
             print(
-                f"✓ {len(matchs)} matchs"
+                f"✓ J{numero} : "
+                f"{len(matchs)} matchs récupérés"
             )
 
 
-        # -----------------------------------------------
-        # SAUVEGARDE
-        # -----------------------------------------------
+        # =================================================
+        # SAUVEGARDE JSON
+        # =================================================
 
         with open(
-
             "calendrier.json",
-
             "w",
-
             encoding="utf-8"
-
         ) as fichier:
+
 
             json.dump(
-
                 calendrier_complet,
-
                 fichier,
-
                 ensure_ascii=False,
-
                 indent=4
-
-            )
-
-
-        # Debug de la dernière journée
-        with open(
-
-            "debug_calendrier.txt",
-
-            "w",
-
-            encoding="utf-8"
-
-        ) as fichier:
-
-            fichier.write(
-
-                page.locator(
-                    "body"
-                ).inner_text()
             )
 
 
         print(
-            "\n================================"
+            "\n================================="
         )
 
         print(
@@ -371,8 +379,23 @@ def main():
         )
 
         print(
-            "================================"
+            "================================="
         )
+
+
+        # Debug de la dernière page affichée
+        with open(
+            "debug_calendrier.txt",
+            "w",
+            encoding="utf-8"
+        ) as fichier:
+
+
+            fichier.write(
+                page.locator(
+                    "body"
+                ).inner_text()
+            )
 
 
         browser.close()
