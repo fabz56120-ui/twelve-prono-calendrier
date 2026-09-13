@@ -8,9 +8,11 @@ permissions:
 
 jobs:
   update-calendrier:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Récupération du dépôt
         uses: actions/checkout@v4
 
@@ -33,11 +35,10 @@ jobs:
           git config user.name "Twelve Prono Bot"
           git config user.email "actions@github.com"
 
-          git add .
+          git add calendrier.json debug_calendrier.txt debug_calendrier.html
 
-          if git diff --cached --quiet
-          then
-            echo "Aucune modification."
+          if git diff --cached --quiet; then
+            echo "Aucune modification du calendrier."
           else
             git commit -m "Mise à jour automatique du calendrier"
             git push
