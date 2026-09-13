@@ -1,173 +1,72 @@
 {
     "source": "https://prod2.lnr.fr/calendrier-et-resultats",
-    "calendrier": [
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "Biarritz Olympique PB",
-            "score": "36 - 5",
-            "exterieur": "Nissa Rugby"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "Soyaux-Angoulême XV",
-            "score": "38 - 26",
-            "exterieur": "Colomiers Rugby"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "AS Béziers Hérault",
-            "score": "21 - 31",
-            "exterieur": "Oyonnax Rugby"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "US Dax",
-            "score": "57 - 19",
-            "exterieur": "RC Narbonnais"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "FC Grenoble Rugby",
-            "score": "57 - 33",
-            "exterieur": "Stade Aurillacois"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "USON Nevers",
-            "score": "21 - 25",
-            "exterieur": "US Montauban"
-        },
-        {
-            "journee": "J1",
-            "date": "JEUDI 27 AOÛT",
-            "domicile": "Provence Rugby",
-            "score": "44 - 10",
-            "exterieur": "SU Agen"
-        },
-        {
-            "journee": "J1",
-            "date": "VENDREDI 28 AOÛT",
-            "domicile": "CA Brive",
-            "score": "23 - 21",
-            "exterieur": "Valence Romans"
-        },
-        {
-            "journee": "J2",
-            "date": "JEUDI 03 SEPTEMBRE",
-            "domicile": "Colomiers Rugby",
-            "score": "13 - 18",
-            "exterieur": "Provence Rugby"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "US Montauban",
-            "score": "20 - 17",
-            "exterieur": "FC Grenoble Rugby"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "Stade Aurillacois",
-            "score": "65 - 35",
-            "exterieur": "US Dax"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "RC Narbonnais",
-            "score": "28 - 26",
-            "exterieur": "USON Nevers"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "Nissa Rugby",
-            "score": "43 - 6",
-            "exterieur": "AS Béziers Hérault"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "Oyonnax Rugby",
-            "score": "47 - 25",
-            "exterieur": "Biarritz Olympique PB"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "Valence Romans",
-            "score": "39 - 22",
-            "exterieur": "Soyaux-Angoulême XV"
-        },
-        {
-            "journee": "J2",
-            "date": "VENDREDI 04 SEPTEMBRE",
-            "domicile": "SU Agen",
-            "score": "14 - 37",
-            "exterieur": "CA Brive"
-        },
-        {
-            "journee": "J3",
-            "date": "JEUDI 10 SEPTEMBRE",
-            "domicile": "Biarritz Olympique PB",
-            "score": "38 - 20",
-            "exterieur": "Colomiers Rugby"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "Soyaux-Angoulême XV",
-            "score": "45 - 7",
-            "exterieur": "US Montauban"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "Provence Rugby",
-            "score": "47 - 42",
-            "exterieur": "RC Narbonnais"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "AS Béziers Hérault",
-            "score": "21 - 20",
-            "exterieur": "USON Nevers"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "CA Brive",
-            "score": "38 - 17",
-            "exterieur": "Nissa Rugby"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "US Dax",
-            "score": "27 - 20",
-            "exterieur": "Valence Romans"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "Oyonnax Rugby",
-            "score": "52 - 17",
-            "exterieur": "Stade Aurillacois"
-        },
-        {
-            "journee": "J3",
-            "date": "VENDREDI 11 SEPTEMBRE",
-            "domicile": "FC Grenoble Rugby",
-            "score": "33 - 39",
-            "exterieur": "SU Agen"
-        }
-    ]
+    "saison": "2026-2027",
+    "journees": {
+        "J3": [
+            {
+                "journee": "J3",
+                "date": "JEUDI 10 SEPTEMBRE",
+                "domicile": "Biarritz Olympique PB",
+                "exterieur": "Colomiers Rugby",
+                "scoreDomicile": 38,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "US Montauban",
+                "scoreDomicile": 45,
+                "scoreExterieur": 7
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "Provence Rugby",
+                "exterieur": "RC Narbonnais",
+                "scoreDomicile": 47,
+                "scoreExterieur": 42
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "AS Béziers Hérault",
+                "exterieur": "USON Nevers",
+                "scoreDomicile": 21,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "CA Brive",
+                "exterieur": "Nissa Rugby",
+                "scoreDomicile": 38,
+                "scoreExterieur": 17
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "US Dax",
+                "exterieur": "Valence Romans",
+                "scoreDomicile": 27,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "Oyonnax Rugby",
+                "exterieur": "Stade Aurillacois",
+                "scoreDomicile": 52,
+                "scoreExterieur": 17
+            },
+            {
+                "journee": "J3",
+                "date": "VENDREDI 11 SEPTEMBRE",
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "SU Agen",
+                "scoreDomicile": 33,
+                "scoreExterieur": 39
+            }
+        ]
+    }
 }
