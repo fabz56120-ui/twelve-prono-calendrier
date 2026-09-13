@@ -137,6 +137,70 @@
         "J3": [
             {
                 "journee": "J3",
+                "date": null,
+                "domicile": "10/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 38,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 45,
+                "scoreExterieur": 7
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 38,
+                "scoreExterieur": 17
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 47,
+                "scoreExterieur": 42
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 27,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 21,
+                "scoreExterieur": 20
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "11/09",
+                "scoreDomicile": 52,
+                "scoreExterieur": 17
+            },
+            {
+                "journee": "J3",
+                "date": null,
+                "domicile": "11/09",
+                "exterieur": "CALENDRIER ET RÉSULTATS",
+                "scoreDomicile": 33,
+                "scoreExterieur": 39
+            },
+            {
+                "journee": "J3",
                 "date": "JEUDI 10 SEPTEMBRE",
                 "domicile": "Biarritz Olympique PB",
                 "exterieur": "Colomiers Rugby",
