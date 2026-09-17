@@ -1,12 +1,13 @@
 
+
 name: Mise à jour calendrier PRO D2
 
 on:
   workflow_dispatch:
 
   schedule:
-    - cron: "0 21 * * 4"
-    - cron: "0 21 * * 5"
+    - cron: "30 21 * * 4"
+    - cron: "30 21 * * 5"
 
 permissions:
   contents: write
