@@ -401,7 +401,15 @@
         "J7": [
             {
                 "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
+                "date": "VENDREDI 16 OCTOBRE",
+                "domicile": "Oyonnax Rugby",
+                "exterieur": "Valence Romans",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J7",
+                "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "AS Béziers Hérault",
                 "exterieur": "Stade Aurillacois",
                 "scoreDomicile": null,
@@ -409,23 +417,7 @@
             },
             {
                 "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
-                "domicile": "Biarritz Olympique PB",
-                "exterieur": "Soyaux-Angoulême XV",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
-                "domicile": "CA Brive",
-                "exterieur": "FC Grenoble Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
+                "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Colomiers Rugby",
                 "exterieur": "RC Narbonnais",
                 "scoreDomicile": null,
@@ -433,7 +425,7 @@
             },
             {
                 "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
+                "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "US Dax",
                 "exterieur": "US Montauban",
                 "scoreDomicile": null,
@@ -441,15 +433,7 @@
             },
             {
                 "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
-                "domicile": "USON Nevers",
-                "exterieur": "SU Agen",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
+                "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Nissa Rugby",
                 "exterieur": "Provence Rugby",
                 "scoreDomicile": null,
@@ -457,9 +441,25 @@
             },
             {
                 "journee": "J7",
-                "date": "JEUDI 15 OCTOBRE – VENDREDI 16 OCTOBRE",
-                "domicile": "Oyonnax Rugby",
-                "exterieur": "Valence Romans",
+                "date": "VENDREDI 16 OCTOBRE",
+                "domicile": "Biarritz Olympique PB",
+                "exterieur": "Soyaux-Angoulême XV",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J7",
+                "date": "VENDREDI 16 OCTOBRE",
+                "domicile": "USON Nevers",
+                "exterieur": "SU Agen",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "journee": "J7",
+                "date": "SAMEDI 17 OCTOBRE",
+                "domicile": "CA Brive",
+                "exterieur": "FC Grenoble Rugby",
                 "scoreDomicile": null,
                 "scoreExterieur": null
             }
