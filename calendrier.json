@@ -206,8 +206,8 @@
                 "date": "JEUDI 17 SEPTEMBRE",
                 "domicile": "Stade Aurillacois",
                 "exterieur": "CA Brive",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 28,
+                "scoreExterieur": 29
             },
             {
                 "journee": "J4",
