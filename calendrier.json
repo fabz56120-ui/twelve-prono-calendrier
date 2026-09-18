@@ -262,8 +262,8 @@
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "SU Agen",
                 "exterieur": "Oyonnax Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 17,
+                "scoreExterieur": 19
             }
         ],
         "J5": [
