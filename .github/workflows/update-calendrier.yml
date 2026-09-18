@@ -6,8 +6,10 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "30 21 * * 4"
-    - cron: "30 21 * * 5"
+  - cron: "0 21 * * 4"    # Jeudi 23h00 France
+  - cron: "30 21 * * 4"   # Jeudi 23h30 France
+  - cron: "0 21 * * 5"    # Vendredi 23h00 France
+  - cron: "30 21 * * 5"   # Vendredi 23h30 France
 
 permissions:
   contents: write
