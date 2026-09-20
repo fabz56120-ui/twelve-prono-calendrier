@@ -1,6 +1,8 @@
+
 from playwright.sync_api import sync_playwright
 import json
 import re
+import unicodedata
 
 
 BASE_URL = "https://prod2.lnr.fr/calendrier-et-resultats/2026-2027"
@@ -40,12 +42,52 @@ def nettoyer_lignes(texte):
     return lignes
 
 
+def normaliser_texte(texte):
+
+    if not texte:
+        return ""
+
+    texte = unicodedata.normalize(
+        "NFD",
+        texte
+    )
+
+    texte = "".join(
+        caractere
+        for caractere in texte
+        if unicodedata.category(caractere) != "Mn"
+    )
+
+    texte = texte.upper()
+
+    texte = re.sub(
+        r"[^A-Z0-9]+",
+        "_",
+        texte
+    )
+
+    return texte.strip("_")
+
+
+def creer_match_id(
+    journee,
+    domicile,
+    exterieur,
+    date
+):
+
+    return "_".join([
+        normaliser_texte(journee),
+        normaliser_texte(domicile),
+        normaliser_texte(exterieur),
+        normaliser_texte(date)
+    ])
+
+
 def extraire_section_journee(texte, numero):
 
     titre = f"JOURNÉE {numero}"
 
-    # On prend la dernière occurrence.
-    # Cela évite le petit résumé des résultats présent en haut du site.
     position = texte.rfind(titre)
 
     if position == -1:
@@ -53,7 +95,6 @@ def extraire_section_journee(texte, numero):
 
     section = texte[position:]
 
-    # On coupe avant les éléments qui ne font plus partie du calendrier
     marqueurs_fin = [
         "LES AVANTAGES",
         "NOS PARTENAIRES",
@@ -65,7 +106,6 @@ def extraire_section_journee(texte, numero):
         position_fin = section.find(marqueur)
 
         if position_fin != -1:
-
             section = section[:position_fin]
 
     return section
@@ -83,12 +123,18 @@ def est_une_date(texte):
         "DIMANCHE"
     ]
 
-    return any(texte.startswith(jour) for jour in jours)
+    return any(
+        texte.startswith(jour)
+        for jour in jours
+    )
 
 
 def est_un_score(texte):
 
-    return re.match(r"^\d+\s*-\s*\d+$", texte) is not None
+    return re.match(
+        r"^\d+\s*-\s*\d+$",
+        texte
+    ) is not None
 
 
 def extraire_matchs(texte, numero):
@@ -106,19 +152,16 @@ def extraire_matchs(texte, numero):
     matchs = []
 
     date_actuelle = None
-
     equipes_trouvees = []
     score_en_attente = None
 
     for ligne in lignes:
 
-        # On mémorise la date actuelle
         if est_une_date(ligne):
 
             date_actuelle = ligne
             continue
 
-        # On détecte un score
         if est_un_score(ligne):
 
             morceaux = re.split(
@@ -133,25 +176,29 @@ def extraire_matchs(texte, numero):
 
             continue
 
-        # On ignore les matchs futurs sans score
         if ligne == "-":
 
             score_en_attente = None
             continue
 
-        # On détecte les équipes
         if ligne in EQUIPES:
 
             equipes_trouvees.append(ligne)
 
-            # Dès qu'on a deux équipes,
-            # on peut créer un match
             if len(equipes_trouvees) == 2:
 
                 domicile = equipes_trouvees[0]
                 exterieur = equipes_trouvees[1]
 
+                match_id = creer_match_id(
+                    f"J{numero}",
+                    domicile,
+                    exterieur,
+                    date_actuelle
+                )
+
                 match = {
+                    "id": match_id,
                     "journee": f"J{numero}",
                     "date": date_actuelle,
                     "domicile": domicile,
@@ -162,26 +209,25 @@ def extraire_matchs(texte, numero):
 
                 if score_en_attente is not None:
 
-                    match["scoreDomicile"] = score_en_attente[0]
-                    match["scoreExterieur"] = score_en_attente[1]
+                    match["scoreDomicile"] = (
+                        score_en_attente[0]
+                    )
+
+                    match["scoreExterieur"] = (
+                        score_en_attente[1]
+                    )
 
                 matchs.append(match)
 
                 equipes_trouvees = []
                 score_en_attente = None
 
-    # Sécurité supplémentaire :
-    # suppression des doublons éventuels
     matchs_uniques = []
     deja_vus = set()
 
     for match in matchs:
 
-        cle = (
-            match["journee"],
-            match["domicile"],
-            match["exterieur"]
-        )
+        cle = match["id"]
 
         if cle not in deja_vus:
 
@@ -218,9 +264,7 @@ def main():
                 f"Récupération de J{numero}..."
             )
 
-            url = (
-                f"{BASE_URL}/j{numero}"
-            )
+            url = f"{BASE_URL}/j{numero}"
 
             try:
 
@@ -230,7 +274,6 @@ def main():
                     timeout=60000
                 )
 
-                # Laisse le JavaScript charger
                 page.wait_for_timeout(3000)
 
                 texte = page.locator(
