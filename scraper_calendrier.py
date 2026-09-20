@@ -86,9 +86,19 @@ def creer_match_id(
 
 def extraire_section_journee(texte, numero):
 
-    titre = f"JOURNÉE {numero}"
+    titres_possibles = [
+        f"JOURNÉE {numero}",
+        f"JOURNEE {numero}"
+    ]
 
-    position = texte.rfind(titre)
+    position = -1
+
+    for titre in titres_possibles:
+
+        position_titre = texte.rfind(titre)
+
+        if position_titre > position:
+            position = position_titre
 
     if position == -1:
         return ""
@@ -101,12 +111,17 @@ def extraire_section_journee(texte, numero):
         "BON PLAN"
     ]
 
+    positions_fin = []
+
     for marqueur in marqueurs_fin:
 
         position_fin = section.find(marqueur)
 
         if position_fin != -1:
-            section = section[:position_fin]
+            positions_fin.append(position_fin)
+
+    if positions_fin:
+        section = section[:min(positions_fin)]
 
     return section
 
@@ -123,10 +138,36 @@ def est_une_date(texte):
         "DIMANCHE"
     ]
 
+    texte_majuscule = texte.upper()
+
     return any(
-        texte.startswith(jour)
+        texte_majuscule.startswith(jour)
         for jour in jours
     )
+
+
+def extraire_heure(texte):
+
+    if not texte:
+        return None
+
+    correspondance = re.search(
+        r"(?<!\d)([01]?\d|2[0-3])\s*(?::|h|H)\s*([0-5]\d)(?!\d)",
+        texte
+    )
+
+    if not correspondance:
+        return None
+
+    heure = int(correspondance.group(1))
+    minutes = correspondance.group(2)
+
+    return f"{heure:02d}:{minutes}"
+
+
+def est_une_heure(texte):
+
+    return extraire_heure(texte) is not None
 
 
 def est_un_score(texte):
@@ -135,6 +176,19 @@ def est_un_score(texte):
         r"^\d+\s*-\s*\d+$",
         texte
     ) is not None
+
+
+def convertir_score(texte):
+
+    morceaux = re.split(
+        r"\s*-\s*",
+        texte
+    )
+
+    return (
+        int(morceaux[0]),
+        int(morceaux[1])
+    )
 
 
 def extraire_matchs(texte, numero):
@@ -152,35 +206,44 @@ def extraire_matchs(texte, numero):
     matchs = []
 
     date_actuelle = None
+    heure_actuelle = None
     equipes_trouvees = []
     score_en_attente = None
 
     for ligne in lignes:
 
+        # Nouvelle date
         if est_une_date(ligne):
 
             date_actuelle = ligne
+            heure_actuelle = extraire_heure(ligne)
+
+            equipes_trouvees = []
+            score_en_attente = None
+
             continue
 
+        # Heure présente sur une ligne séparée
+        heure_detectee = extraire_heure(ligne)
+
+        if heure_detectee is not None:
+
+            heure_actuelle = heure_detectee
+            continue
+
+        # Score du match
         if est_un_score(ligne):
 
-            morceaux = re.split(
-                r"\s*-\s*",
-                ligne
-            )
-
-            score_en_attente = (
-                int(morceaux[0]),
-                int(morceaux[1])
-            )
+            score_en_attente = convertir_score(ligne)
 
             continue
 
+        # Séparateur présent sur la page
         if ligne == "-":
 
-            score_en_attente = None
             continue
 
+        # Équipe détectée
         if ligne in EQUIPES:
 
             equipes_trouvees.append(ligne)
@@ -201,6 +264,7 @@ def extraire_matchs(texte, numero):
                     "id": match_id,
                     "journee": f"J{numero}",
                     "date": date_actuelle,
+                    "heure": heure_actuelle,
                     "domicile": domicile,
                     "exterieur": exterieur,
                     "scoreDomicile": None,
@@ -219,8 +283,10 @@ def extraire_matchs(texte, numero):
 
                 matchs.append(match)
 
+                # Réinitialisation après chaque match
                 equipes_trouvees = []
                 score_en_attente = None
+                heure_actuelle = None
 
     matchs_uniques = []
     deja_vus = set()
@@ -293,6 +359,14 @@ def main():
                     f"✓ {len(matchs)} match(s) récupéré(s)"
                 )
 
+                for match in matchs:
+
+                    print(
+                        f"  {match['domicile']} - "
+                        f"{match['exterieur']} | "
+                        f"Heure : {match['heure']}"
+                    )
+
             except Exception as erreur:
 
                 print(
@@ -327,4 +401,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
