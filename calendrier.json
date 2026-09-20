@@ -4,6 +4,7 @@
     "journees": {
         "J1": [
             {
+                "id": "J1_BIARRITZ_OLYMPIQUE_PB_NISSA_RUGBY_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "Biarritz Olympique PB",
@@ -12,6 +13,7 @@
                 "scoreExterieur": 5
             },
             {
+                "id": "J1_SOYAUX_ANGOULEME_XV_COLOMIERS_RUGBY_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "Soyaux-Angoulême XV",
@@ -20,6 +22,7 @@
                 "scoreExterieur": 26
             },
             {
+                "id": "J1_AS_BEZIERS_HERAULT_OYONNAX_RUGBY_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "AS Béziers Hérault",
@@ -28,6 +31,7 @@
                 "scoreExterieur": 31
             },
             {
+                "id": "J1_US_DAX_RC_NARBONNAIS_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "US Dax",
@@ -36,6 +40,7 @@
                 "scoreExterieur": 19
             },
             {
+                "id": "J1_FC_GRENOBLE_RUGBY_STADE_AURILLACOIS_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "FC Grenoble Rugby",
@@ -44,6 +49,7 @@
                 "scoreExterieur": 33
             },
             {
+                "id": "J1_USON_NEVERS_US_MONTAUBAN_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "USON Nevers",
@@ -52,6 +58,7 @@
                 "scoreExterieur": 25
             },
             {
+                "id": "J1_PROVENCE_RUGBY_SU_AGEN_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "JEUDI 27 AOÛT",
                 "domicile": "Provence Rugby",
@@ -60,6 +67,7 @@
                 "scoreExterieur": 10
             },
             {
+                "id": "J1_CA_BRIVE_VALENCE_ROMANS_VENDREDI_28_AOUT",
                 "journee": "J1",
                 "date": "VENDREDI 28 AOÛT",
                 "domicile": "CA Brive",
@@ -70,6 +78,7 @@
         ],
         "J2": [
             {
+                "id": "J2_COLOMIERS_RUGBY_PROVENCE_RUGBY_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "JEUDI 03 SEPTEMBRE",
                 "domicile": "Colomiers Rugby",
@@ -78,6 +87,7 @@
                 "scoreExterieur": 18
             },
             {
+                "id": "J2_US_MONTAUBAN_FC_GRENOBLE_RUGBY_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "US Montauban",
@@ -86,6 +96,7 @@
                 "scoreExterieur": 17
             },
             {
+                "id": "J2_STADE_AURILLACOIS_US_DAX_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -94,6 +105,7 @@
                 "scoreExterieur": 35
             },
             {
+                "id": "J2_RC_NARBONNAIS_USON_NEVERS_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "RC Narbonnais",
@@ -102,6 +114,7 @@
                 "scoreExterieur": 26
             },
             {
+                "id": "J2_NISSA_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "Nissa Rugby",
@@ -110,6 +123,7 @@
                 "scoreExterieur": 6
             },
             {
+                "id": "J2_OYONNAX_RUGBY_BIARRITZ_OLYMPIQUE_PB_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -118,6 +132,7 @@
                 "scoreExterieur": 25
             },
             {
+                "id": "J2_VALENCE_ROMANS_SOYAUX_ANGOULEME_XV_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "Valence Romans",
@@ -126,6 +141,7 @@
                 "scoreExterieur": 22
             },
             {
+                "id": "J2_SU_AGEN_CA_BRIVE_VENDREDI_04_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "domicile": "SU Agen",
@@ -136,6 +152,7 @@
         ],
         "J3": [
             {
+                "id": "J3_BIARRITZ_OLYMPIQUE_PB_COLOMIERS_RUGBY_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "JEUDI 10 SEPTEMBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -144,6 +161,7 @@
                 "scoreExterieur": 20
             },
             {
+                "id": "J3_SOYAUX_ANGOULEME_XV_US_MONTAUBAN_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -152,6 +170,7 @@
                 "scoreExterieur": 7
             },
             {
+                "id": "J3_PROVENCE_RUGBY_RC_NARBONNAIS_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "Provence Rugby",
@@ -160,6 +179,7 @@
                 "scoreExterieur": 42
             },
             {
+                "id": "J3_AS_BEZIERS_HERAULT_USON_NEVERS_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "AS Béziers Hérault",
@@ -168,6 +188,7 @@
                 "scoreExterieur": 20
             },
             {
+                "id": "J3_CA_BRIVE_NISSA_RUGBY_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "CA Brive",
@@ -176,6 +197,7 @@
                 "scoreExterieur": 17
             },
             {
+                "id": "J3_US_DAX_VALENCE_ROMANS_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "US Dax",
@@ -184,6 +206,7 @@
                 "scoreExterieur": 20
             },
             {
+                "id": "J3_OYONNAX_RUGBY_STADE_AURILLACOIS_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -192,6 +215,7 @@
                 "scoreExterieur": 17
             },
             {
+                "id": "J3_FC_GRENOBLE_RUGBY_SU_AGEN_VENDREDI_11_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -202,6 +226,7 @@
         ],
         "J4": [
             {
+                "id": "J4_STADE_AURILLACOIS_CA_BRIVE_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "JEUDI 17 SEPTEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -210,6 +235,7 @@
                 "scoreExterieur": 29
             },
             {
+                "id": "J4_NISSA_RUGBY_FC_GRENOBLE_RUGBY_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "Nissa Rugby",
@@ -218,6 +244,7 @@
                 "scoreExterieur": 37
             },
             {
+                "id": "J4_COLOMIERS_RUGBY_US_DAX_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "Colomiers Rugby",
@@ -226,6 +253,7 @@
                 "scoreExterieur": 21
             },
             {
+                "id": "J4_US_MONTAUBAN_AS_BEZIERS_HERAULT_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "US Montauban",
@@ -234,6 +262,7 @@
                 "scoreExterieur": 21
             },
             {
+                "id": "J4_RC_NARBONNAIS_SOYAUX_ANGOULEME_XV_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "RC Narbonnais",
@@ -242,6 +271,7 @@
                 "scoreExterieur": 26
             },
             {
+                "id": "J4_USON_NEVERS_BIARRITZ_OLYMPIQUE_PB_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "USON Nevers",
@@ -250,6 +280,7 @@
                 "scoreExterieur": 22
             },
             {
+                "id": "J4_VALENCE_ROMANS_PROVENCE_RUGBY_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "Valence Romans",
@@ -258,6 +289,7 @@
                 "scoreExterieur": 27
             },
             {
+                "id": "J4_SU_AGEN_OYONNAX_RUGBY_VENDREDI_18_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "domicile": "SU Agen",
@@ -268,6 +300,7 @@
         ],
         "J5": [
             {
+                "id": "J5_CA_BRIVE_COLOMIERS_RUGBY_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "JEUDI 24 SEPTEMBRE",
                 "domicile": "CA Brive",
@@ -276,6 +309,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_AS_BEZIERS_HERAULT_RC_NARBONNAIS_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "AS Béziers Hérault",
@@ -284,6 +318,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_PROVENCE_RUGBY_STADE_AURILLACOIS_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "Provence Rugby",
@@ -292,6 +327,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_SOYAUX_ANGOULEME_XV_SU_AGEN_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -300,6 +336,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_BIARRITZ_OLYMPIQUE_PB_US_MONTAUBAN_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -308,6 +345,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_US_DAX_NISSA_RUGBY_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "US Dax",
@@ -316,6 +354,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_OYONNAX_RUGBY_USON_NEVERS_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -324,6 +363,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J5_FC_GRENOBLE_RUGBY_VALENCE_ROMANS_VENDREDI_25_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -334,6 +374,7 @@
         ],
         "J6": [
             {
+                "id": "J6_US_MONTAUBAN_CA_BRIVE_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "JEUDI 08 OCTOBRE",
                 "domicile": "US Montauban",
@@ -342,6 +383,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_SOYAUX_ANGOULEME_XV_PROVENCE_RUGBY_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -350,6 +392,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_SU_AGEN_US_DAX_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "SU Agen",
@@ -358,6 +401,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_RC_NARBONNAIS_OYONNAX_RUGBY_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "RC Narbonnais",
@@ -366,6 +410,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_NISSA_RUGBY_USON_NEVERS_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "Nissa Rugby",
@@ -374,6 +419,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_VALENCE_ROMANS_AS_BEZIERS_HERAULT_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "Valence Romans",
@@ -382,6 +428,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_STADE_AURILLACOIS_BIARRITZ_OLYMPIQUE_PB_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "Stade Aurillacois",
@@ -390,6 +437,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J6_FC_GRENOBLE_RUGBY_COLOMIERS_RUGBY_VENDREDI_09_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -400,6 +448,7 @@
         ],
         "J7": [
             {
+                "id": "J7_OYONNAX_RUGBY_VALENCE_ROMANS_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Oyonnax Rugby",
@@ -408,6 +457,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_AS_BEZIERS_HERAULT_STADE_AURILLACOIS_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "AS Béziers Hérault",
@@ -416,6 +466,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_COLOMIERS_RUGBY_RC_NARBONNAIS_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Colomiers Rugby",
@@ -424,6 +475,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_US_DAX_US_MONTAUBAN_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "US Dax",
@@ -432,6 +484,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_NISSA_RUGBY_PROVENCE_RUGBY_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Nissa Rugby",
@@ -440,6 +493,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_BIARRITZ_OLYMPIQUE_PB_SOYAUX_ANGOULEME_XV_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -448,6 +502,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_USON_NEVERS_SU_AGEN_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "VENDREDI 16 OCTOBRE",
                 "domicile": "USON Nevers",
@@ -456,6 +511,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J7_CA_BRIVE_FC_GRENOBLE_RUGBY_SAMEDI_17_OCTOBRE",
                 "journee": "J7",
                 "date": "SAMEDI 17 OCTOBRE",
                 "domicile": "CA Brive",
@@ -466,6 +522,7 @@
         ],
         "J8": [
             {
+                "id": "J8_SU_AGEN_NISSA_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "SU Agen",
@@ -474,6 +531,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "Provence Rugby",
@@ -482,6 +540,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -490,6 +549,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_STADE_AURILLACOIS_USON_NEVERS_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "Stade Aurillacois",
@@ -498,6 +558,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -506,6 +567,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_US_MONTAUBAN_OYONNAX_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "US Montauban",
@@ -514,6 +576,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_RC_NARBONNAIS_CA_BRIVE_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "RC Narbonnais",
@@ -522,6 +585,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
                 "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
                 "domicile": "Valence Romans",
@@ -532,6 +596,7 @@
         ],
         "J9": [
             {
+                "id": "J9_AS_BEZIERS_HERAULT_FC_GRENOBLE_RUGBY_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "AS Béziers Hérault",
@@ -540,6 +605,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_BIARRITZ_OLYMPIQUE_PB_VALENCE_ROMANS_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -548,6 +614,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_COLOMIERS_RUGBY_SU_AGEN_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "Colomiers Rugby",
@@ -556,6 +623,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_US_DAX_PROVENCE_RUGBY_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "US Dax",
@@ -564,6 +632,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_US_MONTAUBAN_RC_NARBONNAIS_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "US Montauban",
@@ -572,6 +641,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_USON_NEVERS_CA_BRIVE_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "USON Nevers",
@@ -580,6 +650,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_NISSA_RUGBY_STADE_AURILLACOIS_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "Nissa Rugby",
@@ -588,6 +659,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J9_OYONNAX_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_29_OCTOBRE_VENDREDI_30_OCTOBRE",
                 "journee": "J9",
                 "date": "JEUDI 29 OCTOBRE – VENDREDI 30 OCTOBRE",
                 "domicile": "Oyonnax Rugby",
@@ -598,6 +670,7 @@
         ],
         "J10": [
             {
+                "id": "J10_SU_AGEN_BIARRITZ_OLYMPIQUE_PB_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "SU Agen",
@@ -606,6 +679,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_PROVENCE_RUGBY_OYONNAX_RUGBY_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "Provence Rugby",
@@ -614,6 +688,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_SOYAUX_ANGOULEME_XV_FC_GRENOBLE_RUGBY_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -622,6 +697,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_STADE_AURILLACOIS_US_MONTAUBAN_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -630,6 +706,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_CA_BRIVE_US_DAX_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "CA Brive",
@@ -638,6 +715,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_COLOMIERS_RUGBY_AS_BEZIERS_HERAULT_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "Colomiers Rugby",
@@ -646,6 +724,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_RC_NARBONNAIS_NISSA_RUGBY_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "RC Narbonnais",
@@ -654,6 +733,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J10_VALENCE_ROMANS_USON_NEVERS_JEUDI_05_NOVEMBRE_VENDREDI_06_NOVEMBRE",
                 "journee": "J10",
                 "date": "JEUDI 05 NOVEMBRE – VENDREDI 06 NOVEMBRE",
                 "domicile": "Valence Romans",
@@ -664,6 +744,7 @@
         ],
         "J11": [
             {
+                "id": "J11_STADE_AURILLACOIS_COLOMIERS_RUGBY_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -672,6 +753,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_AS_BEZIERS_HERAULT_US_DAX_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "AS Béziers Hérault",
@@ -680,6 +762,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_BIARRITZ_OLYMPIQUE_PB_RC_NARBONNAIS_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -688,6 +771,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_FC_GRENOBLE_RUGBY_PROVENCE_RUGBY_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -696,6 +780,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_US_MONTAUBAN_SU_AGEN_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "US Montauban",
@@ -704,6 +789,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_USON_NEVERS_SOYAUX_ANGOULEME_XV_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "USON Nevers",
@@ -712,6 +798,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_NISSA_RUGBY_VALENCE_ROMANS_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "Nissa Rugby",
@@ -720,6 +807,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J11_OYONNAX_RUGBY_CA_BRIVE_JEUDI_19_NOVEMBRE_VENDREDI_20_NOVEMBRE",
                 "journee": "J11",
                 "date": "JEUDI 19 NOVEMBRE – VENDREDI 20 NOVEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -730,6 +818,7 @@
         ],
         "J12": [
             {
+                "id": "J12_SU_AGEN_AS_BEZIERS_HERAULT_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "SU Agen",
@@ -738,6 +827,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_PROVENCE_RUGBY_US_MONTAUBAN_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "Provence Rugby",
@@ -746,6 +836,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_SOYAUX_ANGOULEME_XV_NISSA_RUGBY_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -754,6 +845,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_CA_BRIVE_BIARRITZ_OLYMPIQUE_PB_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "CA Brive",
@@ -762,6 +854,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_COLOMIERS_RUGBY_USON_NEVERS_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "Colomiers Rugby",
@@ -770,6 +863,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_US_DAX_OYONNAX_RUGBY_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "US Dax",
@@ -778,6 +872,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_RC_NARBONNAIS_FC_GRENOBLE_RUGBY_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "RC Narbonnais",
@@ -786,6 +881,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J12_VALENCE_ROMANS_STADE_AURILLACOIS_JEUDI_26_NOVEMBRE_VENDREDI_27_NOVEMBRE",
                 "journee": "J12",
                 "date": "JEUDI 26 NOVEMBRE – VENDREDI 27 NOVEMBRE",
                 "domicile": "Valence Romans",
@@ -796,6 +892,7 @@
         ],
         "J13": [
             {
+                "id": "J13_STADE_AURILLACOIS_SOYAUX_ANGOULEME_XV_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -804,6 +901,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_AS_BEZIERS_HERAULT_CA_BRIVE_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "AS Béziers Hérault",
@@ -812,6 +910,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_BIARRITZ_OLYMPIQUE_PB_PROVENCE_RUGBY_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "Biarritz Olympique PB",
@@ -820,6 +919,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_US_MONTAUBAN_VALENCE_ROMANS_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "US Montauban",
@@ -828,6 +928,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_RC_NARBONNAIS_SU_AGEN_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "RC Narbonnais",
@@ -836,6 +937,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_USON_NEVERS_US_DAX_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "USON Nevers",
@@ -844,6 +946,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_NISSA_RUGBY_COLOMIERS_RUGBY_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "Nissa Rugby",
@@ -852,6 +955,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J13_OYONNAX_RUGBY_FC_GRENOBLE_RUGBY_JEUDI_03_DECEMBRE_VENDREDI_04_DECEMBRE",
                 "journee": "J13",
                 "date": "JEUDI 03 DÉCEMBRE – VENDREDI 04 DÉCEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -862,6 +966,7 @@
         ],
         "J14": [
             {
+                "id": "J14_SU_AGEN_STADE_AURILLACOIS_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "SU Agen",
@@ -870,6 +975,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_PROVENCE_RUGBY_CA_BRIVE_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "Provence Rugby",
@@ -878,6 +984,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_SOYAUX_ANGOULEME_XV_AS_BEZIERS_HERAULT_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "Soyaux-Angoulême XV",
@@ -886,6 +993,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_COLOMIERS_RUGBY_US_MONTAUBAN_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "Colomiers Rugby",
@@ -894,6 +1002,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_US_DAX_BIARRITZ_OLYMPIQUE_PB_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "US Dax",
@@ -902,6 +1011,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_FC_GRENOBLE_RUGBY_USON_NEVERS_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "FC Grenoble Rugby",
@@ -910,6 +1020,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_NISSA_RUGBY_OYONNAX_RUGBY_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "Nissa Rugby",
@@ -918,6 +1029,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J14_VALENCE_ROMANS_RC_NARBONNAIS_JEUDI_10_DECEMBRE_VENDREDI_11_DECEMBRE",
                 "journee": "J14",
                 "date": "JEUDI 10 DÉCEMBRE – VENDREDI 11 DÉCEMBRE",
                 "domicile": "Valence Romans",
@@ -928,6 +1040,7 @@
         ],
         "J15": [
             {
+                "id": "J15_STADE_AURILLACOIS_RC_NARBONNAIS_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "Stade Aurillacois",
@@ -936,6 +1049,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_AS_BEZIERS_HERAULT_BIARRITZ_OLYMPIQUE_PB_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "AS Béziers Hérault",
@@ -944,6 +1058,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_CA_BRIVE_SOYAUX_ANGOULEME_XV_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "CA Brive",
@@ -952,6 +1067,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_US_DAX_FC_GRENOBLE_RUGBY_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "US Dax",
@@ -960,6 +1076,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_US_MONTAUBAN_NISSA_RUGBY_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "US Montauban",
@@ -968,6 +1085,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_USON_NEVERS_PROVENCE_RUGBY_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "USON Nevers",
@@ -976,6 +1094,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_OYONNAX_RUGBY_COLOMIERS_RUGBY_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "Oyonnax Rugby",
@@ -984,6 +1103,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J15_VALENCE_ROMANS_SU_AGEN_JEUDI_17_DECEMBRE_VENDREDI_18_DECEMBRE",
                 "journee": "J15",
                 "date": "JEUDI 17 DÉCEMBRE – VENDREDI 18 DÉCEMBRE",
                 "domicile": "Valence Romans",
@@ -994,6 +1114,7 @@
         ],
         "J16": [
             {
+                "id": "J16_SU_AGEN_USON_NEVERS_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "SU Agen",
@@ -1002,6 +1123,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_PROVENCE_RUGBY_VALENCE_ROMANS_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "Provence Rugby",
@@ -1010,6 +1132,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_SOYAUX_ANGOULEME_XV_OYONNAX_RUGBY_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1018,6 +1141,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_BIARRITZ_OLYMPIQUE_PB_STADE_AURILLACOIS_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "Biarritz Olympique PB",
@@ -1026,6 +1150,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_COLOMIERS_RUGBY_CA_BRIVE_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "Colomiers Rugby",
@@ -1034,6 +1159,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_FC_GRENOBLE_RUGBY_AS_BEZIERS_HERAULT_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "FC Grenoble Rugby",
@@ -1042,6 +1168,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_RC_NARBONNAIS_US_MONTAUBAN_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "RC Narbonnais",
@@ -1050,6 +1177,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J16_NISSA_RUGBY_US_DAX_JEUDI_07_JANVIER_VENDREDI_08_JANVIER",
                 "journee": "J16",
                 "date": "JEUDI 07 JANVIER – VENDREDI 08 JANVIER",
                 "domicile": "Nissa Rugby",
@@ -1060,6 +1188,7 @@
         ],
         "J17": [
             {
+                "id": "J17_STADE_AURILLACOIS_PROVENCE_RUGBY_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "Stade Aurillacois",
@@ -1068,6 +1197,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_AS_BEZIERS_HERAULT_COLOMIERS_RUGBY_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "AS Béziers Hérault",
@@ -1076,6 +1206,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_CA_BRIVE_SU_AGEN_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "CA Brive",
@@ -1084,6 +1215,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_US_DAX_SOYAUX_ANGOULEME_XV_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "US Dax",
@@ -1092,6 +1224,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_US_MONTAUBAN_BIARRITZ_OLYMPIQUE_PB_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "US Montauban",
@@ -1100,6 +1233,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_USON_NEVERS_NISSA_RUGBY_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "USON Nevers",
@@ -1108,6 +1242,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_OYONNAX_RUGBY_RC_NARBONNAIS_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "Oyonnax Rugby",
@@ -1116,6 +1251,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J17_VALENCE_ROMANS_FC_GRENOBLE_RUGBY_JEUDI_14_JANVIER_VENDREDI_15_JANVIER",
                 "journee": "J17",
                 "date": "JEUDI 14 JANVIER – VENDREDI 15 JANVIER",
                 "domicile": "Valence Romans",
@@ -1126,6 +1262,7 @@
         ],
         "J18": [
             {
+                "id": "J18_SU_AGEN_US_MONTAUBAN_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "SU Agen",
@@ -1134,6 +1271,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_PROVENCE_RUGBY_FC_GRENOBLE_RUGBY_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Provence Rugby",
@@ -1142,6 +1280,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_SOYAUX_ANGOULEME_XV_VALENCE_ROMANS_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1150,6 +1289,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_BIARRITZ_OLYMPIQUE_PB_USON_NEVERS_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Biarritz Olympique PB",
@@ -1158,6 +1298,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_COLOMIERS_RUGBY_STADE_AURILLACOIS_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Colomiers Rugby",
@@ -1166,6 +1307,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_RC_NARBONNAIS_US_DAX_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "RC Narbonnais",
@@ -1174,6 +1316,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_NISSA_RUGBY_CA_BRIVE_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Nissa Rugby",
@@ -1182,6 +1325,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J18_OYONNAX_RUGBY_AS_BEZIERS_HERAULT_JEUDI_21_JANVIER_VENDREDI_22_JANVIER",
                 "journee": "J18",
                 "date": "JEUDI 21 JANVIER – VENDREDI 22 JANVIER",
                 "domicile": "Oyonnax Rugby",
@@ -1192,6 +1336,7 @@
         ],
         "J19": [
             {
+                "id": "J19_STADE_AURILLACOIS_OYONNAX_RUGBY_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "Stade Aurillacois",
@@ -1200,6 +1345,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_AS_BEZIERS_HERAULT_PROVENCE_RUGBY_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "AS Béziers Hérault",
@@ -1208,6 +1354,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_CA_BRIVE_RC_NARBONNAIS_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "CA Brive",
@@ -1216,6 +1363,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_US_DAX_SU_AGEN_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "US Dax",
@@ -1224,6 +1372,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_FC_GRENOBLE_RUGBY_NISSA_RUGBY_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "FC Grenoble Rugby",
@@ -1232,6 +1381,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_US_MONTAUBAN_SOYAUX_ANGOULEME_XV_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "US Montauban",
@@ -1240,6 +1390,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_USON_NEVERS_COLOMIERS_RUGBY_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "USON Nevers",
@@ -1248,6 +1399,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J19_VALENCE_ROMANS_BIARRITZ_OLYMPIQUE_PB_JEUDI_28_JANVIER_VENDREDI_29_JANVIER",
                 "journee": "J19",
                 "date": "JEUDI 28 JANVIER – VENDREDI 29 JANVIER",
                 "domicile": "Valence Romans",
@@ -1258,6 +1410,7 @@
         ],
         "J20": [
             {
+                "id": "J20_PROVENCE_RUGBY_US_DAX_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Provence Rugby",
@@ -1266,6 +1419,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_SOYAUX_ANGOULEME_XV_USON_NEVERS_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1274,6 +1428,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_STADE_AURILLACOIS_AS_BEZIERS_HERAULT_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Stade Aurillacois",
@@ -1282,6 +1437,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_COLOMIERS_RUGBY_VALENCE_ROMANS_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Colomiers Rugby",
@@ -1290,6 +1446,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_FC_GRENOBLE_RUGBY_CA_BRIVE_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "FC Grenoble Rugby",
@@ -1298,6 +1455,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_RC_NARBONNAIS_BIARRITZ_OLYMPIQUE_PB_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "RC Narbonnais",
@@ -1306,6 +1464,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_NISSA_RUGBY_SU_AGEN_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Nissa Rugby",
@@ -1314,6 +1473,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J20_OYONNAX_RUGBY_US_MONTAUBAN_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
                 "domicile": "Oyonnax Rugby",
@@ -1324,6 +1484,7 @@
         ],
         "J21": [
             {
+                "id": "J21_SU_AGEN_RC_NARBONNAIS_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "SU Agen",
@@ -1332,6 +1493,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_AS_BEZIERS_HERAULT_SOYAUX_ANGOULEME_XV_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "AS Béziers Hérault",
@@ -1340,6 +1502,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_BIARRITZ_OLYMPIQUE_PB_OYONNAX_RUGBY_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "Biarritz Olympique PB",
@@ -1348,6 +1511,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_CA_BRIVE_PROVENCE_RUGBY_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "CA Brive",
@@ -1356,6 +1520,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_US_DAX_COLOMIERS_RUGBY_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "US Dax",
@@ -1364,6 +1529,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_US_MONTAUBAN_STADE_AURILLACOIS_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "US Montauban",
@@ -1372,6 +1538,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_USON_NEVERS_FC_GRENOBLE_RUGBY_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "USON Nevers",
@@ -1380,6 +1547,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J21_VALENCE_ROMANS_NISSA_RUGBY_JEUDI_18_FEVRIER_VENDREDI_19_FEVRIER",
                 "journee": "J21",
                 "date": "JEUDI 18 FÉVRIER – VENDREDI 19 FÉVRIER",
                 "domicile": "Valence Romans",
@@ -1390,6 +1558,7 @@
         ],
         "J22": [
             {
+                "id": "J22_PROVENCE_RUGBY_USON_NEVERS_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "Provence Rugby",
@@ -1398,6 +1567,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_STADE_AURILLACOIS_SU_AGEN_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "Stade Aurillacois",
@@ -1406,6 +1576,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_CA_BRIVE_AS_BEZIERS_HERAULT_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "CA Brive",
@@ -1414,6 +1585,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_COLOMIERS_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "Colomiers Rugby",
@@ -1422,6 +1594,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_FC_GRENOBLE_RUGBY_US_MONTAUBAN_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "FC Grenoble Rugby",
@@ -1430,6 +1603,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_RC_NARBONNAIS_VALENCE_ROMANS_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "RC Narbonnais",
@@ -1438,6 +1612,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_NISSA_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "Nissa Rugby",
@@ -1446,6 +1621,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J22_OYONNAX_RUGBY_US_DAX_JEUDI_25_FEVRIER_VENDREDI_26_FEVRIER",
                 "journee": "J22",
                 "date": "JEUDI 25 FÉVRIER – VENDREDI 26 FÉVRIER",
                 "domicile": "Oyonnax Rugby",
@@ -1456,6 +1632,7 @@
         ],
         "J23": [
             {
+                "id": "J23_SU_AGEN_COLOMIERS_RUGBY_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "SU Agen",
@@ -1464,6 +1641,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_SOYAUX_ANGOULEME_XV_RC_NARBONNAIS_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1472,6 +1650,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_AS_BEZIERS_HERAULT_NISSA_RUGBY_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "AS Béziers Hérault",
@@ -1480,6 +1659,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_BIARRITZ_OLYMPIQUE_PB_FC_GRENOBLE_RUGBY_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "Biarritz Olympique PB",
@@ -1488,6 +1668,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_US_DAX_STADE_AURILLACOIS_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "US Dax",
@@ -1496,6 +1677,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_US_MONTAUBAN_PROVENCE_RUGBY_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "US Montauban",
@@ -1504,6 +1686,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_USON_NEVERS_OYONNAX_RUGBY_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "USON Nevers",
@@ -1512,6 +1695,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J23_VALENCE_ROMANS_CA_BRIVE_JEUDI_04_MARS_VENDREDI_05_MARS",
                 "journee": "J23",
                 "date": "JEUDI 04 MARS – VENDREDI 05 MARS",
                 "domicile": "Valence Romans",
@@ -1522,6 +1706,7 @@
         ],
         "J24": [
             {
+                "id": "J24_PROVENCE_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "Provence Rugby",
@@ -1530,6 +1715,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_STADE_AURILLACOIS_VALENCE_ROMANS_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "Stade Aurillacois",
@@ -1538,6 +1724,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_BIARRITZ_OLYMPIQUE_PB_SU_AGEN_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "Biarritz Olympique PB",
@@ -1546,6 +1733,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_CA_BRIVE_USON_NEVERS_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "CA Brive",
@@ -1554,6 +1742,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_COLOMIERS_RUGBY_OYONNAX_RUGBY_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "Colomiers Rugby",
@@ -1562,6 +1751,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_US_DAX_AS_BEZIERS_HERAULT_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "US Dax",
@@ -1570,6 +1760,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_FC_GRENOBLE_RUGBY_RC_NARBONNAIS_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "FC Grenoble Rugby",
@@ -1578,6 +1769,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J24_NISSA_RUGBY_US_MONTAUBAN_JEUDI_25_MARS_VENDREDI_26_MARS",
                 "journee": "J24",
                 "date": "JEUDI 25 MARS – VENDREDI 26 MARS",
                 "domicile": "Nissa Rugby",
@@ -1588,6 +1780,7 @@
         ],
         "J25": [
             {
+                "id": "J25_SU_AGEN_FC_GRENOBLE_RUGBY_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "SU Agen",
@@ -1596,6 +1789,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_SOYAUX_ANGOULEME_XV_CA_BRIVE_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1604,6 +1798,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_AS_BEZIERS_HERAULT_US_MONTAUBAN_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "AS Béziers Hérault",
@@ -1612,6 +1807,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_COLOMIERS_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "Colomiers Rugby",
@@ -1620,6 +1816,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_RC_NARBONNAIS_PROVENCE_RUGBY_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "RC Narbonnais",
@@ -1628,6 +1825,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_USON_NEVERS_STADE_AURILLACOIS_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "USON Nevers",
@@ -1636,6 +1834,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_OYONNAX_RUGBY_NISSA_RUGBY_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "Oyonnax Rugby",
@@ -1644,6 +1843,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J25_VALENCE_ROMANS_US_DAX_JEUDI_01_AVRIL_VENDREDI_02_AVRIL",
                 "journee": "J25",
                 "date": "JEUDI 01 AVRIL – VENDREDI 02 AVRIL",
                 "domicile": "Valence Romans",
@@ -1654,6 +1854,7 @@
         ],
         "J26": [
             {
+                "id": "J26_SU_AGEN_VALENCE_ROMANS_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "SU Agen",
@@ -1662,6 +1863,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_PROVENCE_RUGBY_COLOMIERS_RUGBY_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "Provence Rugby",
@@ -1670,6 +1872,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_BIARRITZ_OLYMPIQUE_PB_AS_BEZIERS_HERAULT_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "Biarritz Olympique PB",
@@ -1678,6 +1881,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_CA_BRIVE_OYONNAX_RUGBY_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "CA Brive",
@@ -1686,6 +1890,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_FC_GRENOBLE_RUGBY_US_DAX_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "FC Grenoble Rugby",
@@ -1694,6 +1899,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_US_MONTAUBAN_USON_NEVERS_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "US Montauban",
@@ -1702,6 +1908,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_RC_NARBONNAIS_STADE_AURILLACOIS_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "RC Narbonnais",
@@ -1710,6 +1917,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J26_NISSA_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_08_AVRIL_VENDREDI_09_AVRIL",
                 "journee": "J26",
                 "date": "JEUDI 08 AVRIL – VENDREDI 09 AVRIL",
                 "domicile": "Nissa Rugby",
@@ -1720,6 +1928,7 @@
         ],
         "J27": [
             {
+                "id": "J27_SOYAUX_ANGOULEME_XV_BIARRITZ_OLYMPIQUE_PB_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1728,6 +1937,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_STADE_AURILLACOIS_FC_GRENOBLE_RUGBY_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "Stade Aurillacois",
@@ -1736,6 +1946,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_AS_BEZIERS_HERAULT_SU_AGEN_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "AS Béziers Hérault",
@@ -1744,6 +1955,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_COLOMIERS_RUGBY_NISSA_RUGBY_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "Colomiers Rugby",
@@ -1752,6 +1964,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_US_DAX_CA_BRIVE_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "US Dax",
@@ -1760,6 +1973,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_USON_NEVERS_RC_NARBONNAIS_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "USON Nevers",
@@ -1768,6 +1982,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_OYONNAX_RUGBY_PROVENCE_RUGBY_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "Oyonnax Rugby",
@@ -1776,6 +1991,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J27_VALENCE_ROMANS_US_MONTAUBAN_JEUDI_15_AVRIL_VENDREDI_16_AVRIL",
                 "journee": "J27",
                 "date": "JEUDI 15 AVRIL – VENDREDI 16 AVRIL",
                 "domicile": "Valence Romans",
@@ -1786,6 +2002,7 @@
         ],
         "J28": [
             {
+                "id": "J28_SU_AGEN_SOYAUX_ANGOULEME_XV_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "SU Agen",
@@ -1794,6 +2011,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_PROVENCE_RUGBY_NISSA_RUGBY_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "Provence Rugby",
@@ -1802,6 +2020,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_BIARRITZ_OLYMPIQUE_PB_US_DAX_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "Biarritz Olympique PB",
@@ -1810,6 +2029,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_CA_BRIVE_STADE_AURILLACOIS_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "CA Brive",
@@ -1818,6 +2038,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_FC_GRENOBLE_RUGBY_OYONNAX_RUGBY_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "FC Grenoble Rugby",
@@ -1826,6 +2047,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_US_MONTAUBAN_COLOMIERS_RUGBY_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "US Montauban",
@@ -1834,6 +2056,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_RC_NARBONNAIS_AS_BEZIERS_HERAULT_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "RC Narbonnais",
@@ -1842,6 +2065,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J28_USON_NEVERS_VALENCE_ROMANS_JEUDI_22_AVRIL_VENDREDI_23_AVRIL",
                 "journee": "J28",
                 "date": "JEUDI 22 AVRIL – VENDREDI 23 AVRIL",
                 "domicile": "USON Nevers",
@@ -1852,6 +2076,7 @@
         ],
         "J29": [
             {
+                "id": "J29_PROVENCE_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "Provence Rugby",
@@ -1860,6 +2085,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_SOYAUX_ANGOULEME_XV_STADE_AURILLACOIS_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "Soyaux-Angoulême XV",
@@ -1868,6 +2094,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_AS_BEZIERS_HERAULT_VALENCE_ROMANS_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "AS Béziers Hérault",
@@ -1876,6 +2103,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_CA_BRIVE_US_MONTAUBAN_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "CA Brive",
@@ -1884,6 +2112,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_COLOMIERS_RUGBY_FC_GRENOBLE_RUGBY_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "Colomiers Rugby",
@@ -1892,6 +2121,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_US_DAX_USON_NEVERS_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "US Dax",
@@ -1900,6 +2130,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_NISSA_RUGBY_RC_NARBONNAIS_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "Nissa Rugby",
@@ -1908,6 +2139,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J29_OYONNAX_RUGBY_SU_AGEN_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
                 "domicile": "Oyonnax Rugby",
@@ -1918,6 +2150,7 @@
         ],
         "J30": [
             {
+                "id": "J30_SU_AGEN_PROVENCE_RUGBY_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "SU Agen",
@@ -1926,6 +2159,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_STADE_AURILLACOIS_NISSA_RUGBY_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "Stade Aurillacois",
@@ -1934,6 +2168,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_BIARRITZ_OLYMPIQUE_PB_CA_BRIVE_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "Biarritz Olympique PB",
@@ -1942,6 +2177,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_FC_GRENOBLE_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "FC Grenoble Rugby",
@@ -1950,6 +2186,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_US_MONTAUBAN_US_DAX_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "US Montauban",
@@ -1958,6 +2195,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_RC_NARBONNAIS_COLOMIERS_RUGBY_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "RC Narbonnais",
@@ -1966,6 +2204,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_USON_NEVERS_AS_BEZIERS_HERAULT_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "USON Nevers",
@@ -1974,6 +2213,7 @@
                 "scoreExterieur": null
             },
             {
+                "id": "J30_VALENCE_ROMANS_OYONNAX_RUGBY_JEUDI_13_MAI_VENDREDI_14_MAI",
                 "journee": "J30",
                 "date": "JEUDI 13 MAI – VENDREDI 14 MAI",
                 "domicile": "Valence Romans",
