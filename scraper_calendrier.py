@@ -28,20 +28,6 @@ EQUIPES = [
 ]
 
 
-def nettoyer_lignes(texte):
-
-    lignes = []
-
-    for ligne in texte.splitlines():
-
-        ligne = ligne.strip()
-
-        if ligne:
-            lignes.append(ligne)
-
-    return lignes
-
-
 def normaliser_texte(texte):
 
     if not texte:
@@ -57,21 +43,47 @@ def normaliser_texte(texte):
 
     texte = texte.upper()
 
-    texte = re.sub(
-        r"[^A-Z0-9]+",
-        "_",
-        texte
-    )
+    texte = re.sub(r"[^A-Z0-9]+", "_", texte)
 
     return texte.strip("_")
 
 
-def creer_match_id(
-    journee,
-    domicile,
-    exterieur,
-    date
-):
+def nettoyer_ligne(ligne):
+
+    if not ligne:
+        return ""
+
+    # Supprimer le gras Markdown
+    ligne = ligne.replace("**", "")
+
+    # Convertir [Texte](URL) en Texte
+    ligne = re.sub(
+        r"\[([^\]]+)\]\([^)]+\)",
+        r"\1",
+        ligne
+    )
+
+    # Supprimer les éventuels espaces invisibles
+    ligne = ligne.replace("\xa0", " ")
+
+    return ligne.strip()
+
+
+def nettoyer_lignes(texte):
+
+    lignes = []
+
+    for ligne in texte.splitlines():
+
+        ligne = nettoyer_ligne(ligne)
+
+        if ligne:
+            lignes.append(ligne)
+
+    return lignes
+
+
+def creer_match_id(journee, domicile, exterieur, date):
 
     return "_".join([
         normaliser_texte(journee),
@@ -85,17 +97,20 @@ def extraire_section_journee(texte, numero):
 
     titres = [
         f"JOURNÉE {numero}",
-        f"JOURNEE {numero}"
+        f"JOURNEE {numero}",
+        f"Journée {numero}",
+        f"Journee {numero}"
     ]
 
     position = -1
 
     for titre in titres:
 
-        trouve = texte.rfind(titre)
+        trouve = texte.find(titre)
 
-        if trouve > position:
+        if trouve != -1:
             position = trouve
+            break
 
     if position == -1:
         return ""
@@ -135,10 +150,10 @@ def est_une_date(texte):
         "DIMANCHE"
     ]
 
-    texte = texte.upper().strip()
+    texte = nettoyer_ligne(texte).upper().strip()
 
     return any(
-        texte.startswith(jour)
+        texte.startswith(jour + " ")
         for jour in jours
     )
 
@@ -155,17 +170,14 @@ def extraire_heure(texte):
 
     for motif in motifs:
 
-        resultat = re.search(
-            motif,
-            texte
-        )
+        resultat = re.search(motif, texte)
 
         if resultat:
 
             heure = int(resultat.group(1))
-            minutes = resultat.group(2)
+            minutes = int(resultat.group(2))
 
-            return f"{heure:02d}:{minutes}"
+            return f"{heure:02d}:{minutes:02d}"
 
     return None
 
@@ -191,6 +203,20 @@ def extraire_score(texte):
     )
 
 
+def trouver_equipe(texte):
+
+    texte = nettoyer_ligne(texte)
+
+    texte_normalise = normaliser_texte(texte)
+
+    for equipe in EQUIPES:
+
+        if normaliser_texte(equipe) == texte_normalise:
+            return equipe
+
+    return None
+
+
 def extraire_matchs(texte, numero):
 
     section = extraire_section_journee(
@@ -207,90 +233,97 @@ def extraire_matchs(texte, numero):
 
     date_actuelle = None
     heure_actuelle = None
+
     equipes_trouvees = []
     score_en_attente = None
 
     for ligne in lignes:
 
-        heure_ligne = extraire_heure(ligne)
-
+        # Nouvelle date
         if est_une_date(ligne):
 
-            date_actuelle = ligne
-            heure_actuelle = heure_ligne
+            date_actuelle = ligne.upper().strip()
+
+            heure_actuelle = extraire_heure(ligne)
 
             equipes_trouvees = []
             score_en_attente = None
 
             continue
 
+        # Nouvelle heure
+        heure_ligne = extraire_heure(ligne)
+
         if heure_ligne is not None:
 
             heure_actuelle = heure_ligne
+
             continue
 
+        # Nouveau score
         if est_un_score(ligne):
 
             score_en_attente = extraire_score(ligne)
+
             continue
 
         if ligne == "-":
 
             continue
 
-        if ligne in EQUIPES:
+        # Recherche d'une équipe
+        equipe = trouver_equipe(ligne)
 
-            equipes_trouvees.append(ligne)
+        if equipe is None:
+            continue
 
-            if len(equipes_trouvees) == 2:
+        equipes_trouvees.append(equipe)
 
-                domicile = equipes_trouvees[0]
-                exterieur = equipes_trouvees[1]
+        if len(equipes_trouvees) < 2:
+            continue
 
-                match = {
-                    "id": creer_match_id(
-                        f"J{numero}",
-                        domicile,
-                        exterieur,
-                        date_actuelle
-                    ),
-                    "journee": f"J{numero}",
-                    "date": date_actuelle,
-                    "heure": heure_actuelle,
-                    "domicile": domicile,
-                    "exterieur": exterieur,
-                    "scoreDomicile": None,
-                    "scoreExterieur": None
-                }
+        domicile = equipes_trouvees[0]
+        exterieur = equipes_trouvees[1]
 
-                if score_en_attente is not None:
+        match = {
+            "id": creer_match_id(
+                f"J{numero}",
+                domicile,
+                exterieur,
+                date_actuelle or ""
+            ),
+            "journee": f"J{numero}",
+            "date": date_actuelle,
+            "heure": heure_actuelle,
+            "domicile": domicile,
+            "exterieur": exterieur,
+            "scoreDomicile": None,
+            "scoreExterieur": None
+        }
 
-                    match["scoreDomicile"] = (
-                        score_en_attente[0]
-                    )
+        if score_en_attente is not None:
 
-                    match["scoreExterieur"] = (
-                        score_en_attente[1]
-                    )
+            match["scoreDomicile"] = score_en_attente[0]
+            match["scoreExterieur"] = score_en_attente[1]
 
-                matchs.append(match)
+        matchs.append(match)
 
-                equipes_trouvees = []
-                score_en_attente = None
+        # Réinitialisation pour le match suivant
+        equipes_trouvees = []
+        score_en_attente = None
+        heure_actuelle = None
 
-                # On ne supprime pas l'heure ici :
-                # elle peut être réutilisée si le site
-                # affiche l'heure avant le score.
-
+    # Suppression des doublons
     matchs_uniques = []
     deja_vus = set()
 
     for match in matchs:
 
-        if match["id"] not in deja_vus:
+        if match["id"] in deja_vus:
+            continue
 
-            deja_vus.add(match["id"])
-            matchs_uniques.append(match)
+        deja_vus.add(match["id"])
+        matchs_uniques.append(match)
 
     return matchs_uniques
 
@@ -323,9 +356,7 @@ def main():
             print()
             print("=================================")
             print()
-            print(
-                f"Récupération de J{numero}..."
-            )
+            print(f"Récupération de J{numero}...")
 
             url = f"{BASE_URL}/j{numero}"
 
@@ -339,7 +370,6 @@ def main():
 
                 page.wait_for_timeout(5000)
 
-                # Défilement pour déclencher le chargement
                 page.evaluate("""
                     window.scrollTo(
                         0,
@@ -349,11 +379,8 @@ def main():
 
                 page.wait_for_timeout(2000)
 
-                texte = page.locator(
-                    "body"
-                ).inner_text()
+                texte = page.locator("body").inner_text()
 
-                # Sauvegarde du texte pour diagnostic
                 with open(
                     f"debug_J{numero}.txt",
                     "w",
@@ -367,9 +394,7 @@ def main():
                     numero
                 )
 
-                calendrier["journees"][
-                    f"J{numero}"
-                ] = matchs
+                calendrier["journees"][f"J{numero}"] = matchs
 
                 print(
                     f"✓ {len(matchs)} match(s) récupéré(s)"
@@ -392,9 +417,7 @@ def main():
                     f"⚠ Erreur sur J{numero} : {erreur}"
                 )
 
-                calendrier["journees"][
-                    f"J{numero}"
-                ] = []
+                calendrier["journees"][f"J{numero}"] = []
 
         browser.close()
 
