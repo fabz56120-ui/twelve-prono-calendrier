@@ -47,10 +47,7 @@ def normaliser_texte(texte):
     if not texte:
         return ""
 
-    texte = unicodedata.normalize(
-        "NFD",
-        texte
-    )
+    texte = unicodedata.normalize("NFD", texte)
 
     texte = "".join(
         caractere
@@ -86,19 +83,19 @@ def creer_match_id(
 
 def extraire_section_journee(texte, numero):
 
-    titres_possibles = [
+    titres = [
         f"JOURNÉE {numero}",
         f"JOURNEE {numero}"
     ]
 
     position = -1
 
-    for titre in titres_possibles:
+    for titre in titres:
 
-        position_titre = texte.rfind(titre)
+        trouve = texte.rfind(titre)
 
-        if position_titre > position:
-            position = position_titre
+        if trouve > position:
+            position = trouve
 
     if position == -1:
         return ""
@@ -111,17 +108,17 @@ def extraire_section_journee(texte, numero):
         "BON PLAN"
     ]
 
-    positions_fin = []
+    positions = []
 
     for marqueur in marqueurs_fin:
 
-        position_fin = section.find(marqueur)
+        trouve = section.find(marqueur)
 
-        if position_fin != -1:
-            positions_fin.append(position_fin)
+        if trouve != -1:
+            positions.append(trouve)
 
-    if positions_fin:
-        section = section[:min(positions_fin)]
+    if positions:
+        section = section[:min(positions)]
 
     return section
 
@@ -138,10 +135,10 @@ def est_une_date(texte):
         "DIMANCHE"
     ]
 
-    texte_majuscule = texte.upper()
+    texte = texte.upper().strip()
 
     return any(
-        texte_majuscule.startswith(jour)
+        texte.startswith(jour)
         for jour in jours
     )
 
@@ -151,38 +148,41 @@ def extraire_heure(texte):
     if not texte:
         return None
 
-    correspondance = re.search(
-        r"(?<!\d)([01]?\d|2[0-3])\s*(?::|h|H)\s*([0-5]\d)(?!\d)",
-        texte
-    )
+    motifs = [
+        r"(?<!\d)([01]?\d|2[0-3])\s*:\s*([0-5]\d)(?!\d)",
+        r"(?<!\d)([01]?\d|2[0-3])\s*[hH]\s*([0-5]\d)(?!\d)"
+    ]
 
-    if not correspondance:
-        return None
+    for motif in motifs:
 
-    heure = int(correspondance.group(1))
-    minutes = correspondance.group(2)
+        resultat = re.search(
+            motif,
+            texte
+        )
 
-    return f"{heure:02d}:{minutes}"
+        if resultat:
 
+            heure = int(resultat.group(1))
+            minutes = resultat.group(2)
 
-def est_une_heure(texte):
+            return f"{heure:02d}:{minutes}"
 
-    return extraire_heure(texte) is not None
+    return None
 
 
 def est_un_score(texte):
 
-    return re.match(
-        r"^\d+\s*-\s*\d+$",
-        texte
+    return re.fullmatch(
+        r"\d+\s*-\s*\d+",
+        texte.strip()
     ) is not None
 
 
-def convertir_score(texte):
+def extraire_score(texte):
 
     morceaux = re.split(
         r"\s*-\s*",
-        texte
+        texte.strip()
     )
 
     return (
@@ -212,38 +212,32 @@ def extraire_matchs(texte, numero):
 
     for ligne in lignes:
 
-        # Nouvelle date
+        heure_ligne = extraire_heure(ligne)
+
         if est_une_date(ligne):
 
             date_actuelle = ligne
-            heure_actuelle = extraire_heure(ligne)
+            heure_actuelle = heure_ligne
 
             equipes_trouvees = []
             score_en_attente = None
 
             continue
 
-        # Heure présente sur une ligne séparée
-        heure_detectee = extraire_heure(ligne)
+        if heure_ligne is not None:
 
-        if heure_detectee is not None:
-
-            heure_actuelle = heure_detectee
+            heure_actuelle = heure_ligne
             continue
 
-        # Score du match
         if est_un_score(ligne):
 
-            score_en_attente = convertir_score(ligne)
-
+            score_en_attente = extraire_score(ligne)
             continue
 
-        # Séparateur présent sur la page
         if ligne == "-":
 
             continue
 
-        # Équipe détectée
         if ligne in EQUIPES:
 
             equipes_trouvees.append(ligne)
@@ -253,15 +247,13 @@ def extraire_matchs(texte, numero):
                 domicile = equipes_trouvees[0]
                 exterieur = equipes_trouvees[1]
 
-                match_id = creer_match_id(
-                    f"J{numero}",
-                    domicile,
-                    exterieur,
-                    date_actuelle
-                )
-
                 match = {
-                    "id": match_id,
+                    "id": creer_match_id(
+                        f"J{numero}",
+                        domicile,
+                        exterieur,
+                        date_actuelle
+                    ),
                     "journee": f"J{numero}",
                     "date": date_actuelle,
                     "heure": heure_actuelle,
@@ -283,21 +275,21 @@ def extraire_matchs(texte, numero):
 
                 matchs.append(match)
 
-                # Réinitialisation après chaque match
                 equipes_trouvees = []
                 score_en_attente = None
-                heure_actuelle = None
+
+                # On ne supprime pas l'heure ici :
+                # elle peut être réutilisée si le site
+                # affiche l'heure avant le score.
 
     matchs_uniques = []
     deja_vus = set()
 
     for match in matchs:
 
-        cle = match["id"]
+        if match["id"] not in deja_vus:
 
-        if cle not in deja_vus:
-
-            deja_vus.add(cle)
+            deja_vus.add(match["id"])
             matchs_uniques.append(match)
 
     return matchs_uniques
@@ -308,7 +300,7 @@ def main():
     print("Ouverture du calendrier officiel...")
 
     calendrier = {
-        "source": "https://prod2.lnr.fr/calendrier-et-resultats",
+        "source": BASE_URL,
         "saison": "2026-2027",
         "journees": {}
     }
@@ -319,7 +311,12 @@ def main():
             headless=True
         )
 
-        page = browser.new_page()
+        page = browser.new_page(
+            viewport={
+                "width": 1920,
+                "height": 1080
+            }
+        )
 
         for numero in range(1, 31):
 
@@ -336,15 +333,34 @@ def main():
 
                 page.goto(
                     url,
-                    wait_until="domcontentloaded",
+                    wait_until="networkidle",
                     timeout=60000
                 )
 
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(5000)
+
+                # Défilement pour déclencher le chargement
+                page.evaluate("""
+                    window.scrollTo(
+                        0,
+                        document.body.scrollHeight
+                    );
+                """)
+
+                page.wait_for_timeout(2000)
 
                 texte = page.locator(
                     "body"
                 ).inner_text()
+
+                # Sauvegarde du texte pour diagnostic
+                with open(
+                    f"debug_J{numero}.txt",
+                    "w",
+                    encoding="utf-8"
+                ) as debug:
+
+                    debug.write(texte)
 
                 matchs = extraire_matchs(
                     texte,
@@ -362,9 +378,12 @@ def main():
                 for match in matchs:
 
                     print(
-                        f"  {match['domicile']} - "
+                        f"  {match['date']} | "
+                        f"{match['heure']} | "
+                        f"{match['domicile']} - "
                         f"{match['exterieur']} | "
-                        f"Heure : {match['heure']}"
+                        f"{match['scoreDomicile']} - "
+                        f"{match['scoreExterieur']}"
                     )
 
             except Exception as erreur:
