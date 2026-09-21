@@ -2,7 +2,88 @@
     "source": "https://prod2.lnr.fr/calendrier-et-resultats/2026-2027",
     "saison": "2026-2027",
     "journees": {
-        "J1": [],
+        "J1": [
+            {
+                "id": "J1_BIARRITZ_OLYMPIQUE_PB_NISSA_RUGBY_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "Biarritz Olympique PB",
+                "exterieur": "Nissa Rugby",
+                "scoreDomicile": 36,
+                "scoreExterieur": 5
+            },
+            {
+                "id": "J1_SOYAUX_ANGOULEME_XV_COLOMIERS_RUGBY_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "Colomiers Rugby",
+                "scoreDomicile": 38,
+                "scoreExterieur": 26
+            },
+            {
+                "id": "J1_AS_BEZIERS_HERAULT_OYONNAX_RUGBY_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "AS Béziers Hérault",
+                "exterieur": "Oyonnax Rugby",
+                "scoreDomicile": 21,
+                "scoreExterieur": 31
+            },
+            {
+                "id": "J1_US_DAX_RC_NARBONNAIS_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "US Dax",
+                "exterieur": "RC Narbonnais",
+                "scoreDomicile": 57,
+                "scoreExterieur": 19
+            },
+            {
+                "id": "J1_FC_GRENOBLE_RUGBY_STADE_AURILLACOIS_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "Stade Aurillacois",
+                "scoreDomicile": 57,
+                "scoreExterieur": 33
+            },
+            {
+                "id": "J1_USON_NEVERS_US_MONTAUBAN_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "USON Nevers",
+                "exterieur": "US Montauban",
+                "scoreDomicile": 21,
+                "scoreExterieur": 25
+            },
+            {
+                "id": "J1_PROVENCE_RUGBY_SU_AGEN_JEUDI_27_AOUT",
+                "journee": "J1",
+                "date": "JEUDI 27 AOÛT",
+                "heure": null,
+                "domicile": "Provence Rugby",
+                "exterieur": "SU Agen",
+                "scoreDomicile": 44,
+                "scoreExterieur": 10
+            },
+            {
+                "id": "J1_CA_BRIVE_VALENCE_ROMANS_VENDREDI_28_AOUT",
+                "journee": "J1",
+                "date": "VENDREDI 28 AOÛT",
+                "heure": null,
+                "domicile": "CA Brive",
+                "exterieur": "Valence Romans",
+                "scoreDomicile": 23,
+                "scoreExterieur": 21
+            }
+        ],
         "J2": [
             {
                 "id": "J2_COLOMIERS_RUGBY_PROVENCE_RUGBY_JEUDI_03_SEPTEMBRE",
