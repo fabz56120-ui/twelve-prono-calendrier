@@ -497,82 +497,82 @@
         ],
         "J8": [
             {
-                "id": "J8_SU_AGEN_NISSA_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
+                "id": "J8_US_MONTAUBAN_OYONNAX_RUGBY_JEUDI_22_OCTOBRE",
                 "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
-                "domicile": "SU Agen",
-                "exterieur": "Nissa Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
-                "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
-                "domicile": "Provence Rugby",
-                "exterieur": "AS Béziers Hérault",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
-                "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
-                "domicile": "Soyaux-Angoulême XV",
-                "exterieur": "US Dax",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "id": "J8_STADE_AURILLACOIS_USON_NEVERS_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
-                "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
-                "domicile": "Stade Aurillacois",
-                "exterieur": "USON Nevers",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
-                "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
-                "domicile": "FC Grenoble Rugby",
-                "exterieur": "Biarritz Olympique PB",
-                "scoreDomicile": null,
-                "scoreExterieur": null
-            },
-            {
-                "id": "J8_US_MONTAUBAN_OYONNAX_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
-                "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
+                "date": "JEUDI 22 OCTOBRE",
+                "heure": "21:00",
                 "domicile": "US Montauban",
                 "exterieur": "Oyonnax Rugby",
                 "scoreDomicile": null,
                 "scoreExterieur": null
             },
             {
-                "id": "J8_RC_NARBONNAIS_CA_BRIVE_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
+                "id": "J8_RC_NARBONNAIS_CA_BRIVE_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "19:00",
                 "domicile": "RC Narbonnais",
                 "exterieur": "CA Brive",
                 "scoreDomicile": null,
                 "scoreExterieur": null
             },
             {
-                "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_JEUDI_22_OCTOBRE_VENDREDI_23_OCTOBRE",
+                "id": "J8_SU_AGEN_NISSA_RUGBY_VENDREDI_23_OCTOBRE",
                 "journee": "J8",
-                "date": "JEUDI 22 OCTOBRE – VENDREDI 23 OCTOBRE",
-                "heure": null,
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "19:30",
+                "domicile": "SU Agen",
+                "exterieur": "Nissa Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_VENDREDI_23_OCTOBRE",
+                "journee": "J8",
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "19:30",
+                "domicile": "Soyaux-Angoulême XV",
+                "exterieur": "US Dax",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "id": "J8_STADE_AURILLACOIS_USON_NEVERS_VENDREDI_23_OCTOBRE",
+                "journee": "J8",
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "19:30",
+                "domicile": "Stade Aurillacois",
+                "exterieur": "USON Nevers",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_VENDREDI_23_OCTOBRE",
+                "journee": "J8",
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "19:30",
                 "domicile": "Valence Romans",
                 "exterieur": "Colomiers Rugby",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_23_OCTOBRE",
+                "journee": "J8",
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "21:00",
+                "domicile": "Provence Rugby",
+                "exterieur": "AS Béziers Hérault",
+                "scoreDomicile": null,
+                "scoreExterieur": null
+            },
+            {
+                "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_VENDREDI_23_OCTOBRE",
+                "journee": "J8",
+                "date": "VENDREDI 23 OCTOBRE",
+                "heure": "21:00",
+                "domicile": "FC Grenoble Rugby",
+                "exterieur": "Biarritz Olympique PB",
                 "scoreDomicile": null,
                 "scoreExterieur": null
             }
