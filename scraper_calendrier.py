@@ -380,6 +380,7 @@ def main():
                 page.wait_for_timeout(2000)
 
                 texte = page.locator("body").inner_text()
+                print(texte)
 
                 with open(
                     f"debug_J{numero}.txt",
