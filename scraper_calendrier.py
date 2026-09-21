@@ -6,6 +6,7 @@ import unicodedata
 
 
 BASE_URL = "https://prod2.lnr.fr/calendrier-et-resultats/2026-2027"
+RUGBYRAMA_URL = "https://www.rugbyrama.fr/resultats/rugby/pro-d2/calendrier"
 
 
 EQUIPES = [
@@ -53,17 +54,14 @@ def nettoyer_ligne(ligne):
     if not ligne:
         return ""
 
-    # Supprimer le gras Markdown
     ligne = ligne.replace("**", "")
 
-    # Convertir [Texte](URL) en Texte
     ligne = re.sub(
         r"\[([^\]]+)\]\([^)]+\)",
         r"\1",
         ligne
     )
 
-    # Supprimer les éventuels espaces invisibles
     ligne = ligne.replace("\xa0", " ")
 
     return ligne.strip()
@@ -71,16 +69,11 @@ def nettoyer_ligne(ligne):
 
 def nettoyer_lignes(texte):
 
-    lignes = []
-
-    for ligne in texte.splitlines():
-
-        ligne = nettoyer_ligne(ligne)
-
-        if ligne:
-            lignes.append(ligne)
-
-    return lignes
+    return [
+        nettoyer_ligne(ligne)
+        for ligne in texte.splitlines()
+        if nettoyer_ligne(ligne)
+    ]
 
 
 def creer_match_id(journee, domicile, exterieur, date):
@@ -95,7 +88,7 @@ def creer_match_id(journee, domicile, exterieur, date):
 
 def extraire_section_journee(texte, numero):
 
-    titres = [
+    motifs = [
         f"JOURNÉE {numero}",
         f"JOURNEE {numero}",
         f"Journée {numero}",
@@ -104,15 +97,18 @@ def extraire_section_journee(texte, numero):
 
     position = -1
 
-    for titre in titres:
+    for motif in motifs:
 
-        trouve = texte.find(titre)
+        trouve = texte.find(motif)
 
         if trouve != -1:
+
             position = trouve
+
             break
 
     if position == -1:
+
         return ""
 
     section = texte[position:]
@@ -130,9 +126,11 @@ def extraire_section_journee(texte, numero):
         trouve = section.find(marqueur)
 
         if trouve != -1:
+
             positions.append(trouve)
 
     if positions:
+
         section = section[:min(positions)]
 
     return section
@@ -150,7 +148,7 @@ def est_une_date(texte):
         "DIMANCHE"
     ]
 
-    texte = nettoyer_ligne(texte).upper().strip()
+    texte = nettoyer_ligne(texte).upper()
 
     return any(
         texte.startswith(jour + " ")
@@ -161,25 +159,28 @@ def est_une_date(texte):
 def extraire_heure(texte):
 
     if not texte:
+
         return None
 
-    motifs = [
-        r"(?<!\d)([01]?\d|2[0-3])\s*:\s*([0-5]\d)(?!\d)",
-        r"(?<!\d)([01]?\d|2[0-3])\s*[hH]\s*([0-5]\d)(?!\d)"
-    ]
+    motif = (
+        r"(?<!\d)"
+        r"([01]?\d|2[0-3])"
+        r"\s*(?::|[hH])"
+        r"\s*([0-5]\d)"
+        r"(?!\d)"
+    )
 
-    for motif in motifs:
+    resultat = re.search(motif, texte)
 
-        resultat = re.search(motif, texte)
+    if not resultat:
 
-        if resultat:
+        return None
 
-            heure = int(resultat.group(1))
-            minutes = int(resultat.group(2))
+    heure = int(resultat.group(1))
 
-            return f"{heure:02d}:{minutes:02d}"
+    minutes = int(resultat.group(2))
 
-    return None
+    return f"{heure:02d}:{minutes:02d}"
 
 
 def est_un_score(texte):
@@ -205,13 +206,12 @@ def extraire_score(texte):
 
 def trouver_equipe(texte):
 
-    texte = nettoyer_ligne(texte)
-
     texte_normalise = normaliser_texte(texte)
 
     for equipe in EQUIPES:
 
         if normaliser_texte(equipe) == texte_normalise:
+
             return equipe
 
     return None
@@ -225,42 +225,43 @@ def extraire_matchs(texte, numero):
     )
 
     if not section:
-        return []
 
-    lignes = nettoyer_lignes(section)
+        return []
 
     matchs = []
 
     date_actuelle = None
+
     heure_actuelle = None
 
     equipes_trouvees = []
+
     score_en_attente = None
+
+    lignes = nettoyer_lignes(section)
 
     for ligne in lignes:
 
-        # Nouvelle date
         if est_une_date(ligne):
 
-            date_actuelle = ligne.upper().strip()
+            date_actuelle = ligne.upper()
 
             heure_actuelle = extraire_heure(ligne)
 
             equipes_trouvees = []
+
             score_en_attente = None
 
             continue
 
-        # Nouvelle heure
-        heure_ligne = extraire_heure(ligne)
+        heure = extraire_heure(ligne)
 
-        if heure_ligne is not None:
+        if heure:
 
-            heure_actuelle = heure_ligne
+            heure_actuelle = heure
 
             continue
 
-        # Nouveau score
         if est_un_score(ligne):
 
             score_en_attente = extraire_score(ligne)
@@ -271,18 +272,20 @@ def extraire_matchs(texte, numero):
 
             continue
 
-        # Recherche d'une équipe
         equipe = trouver_equipe(ligne)
 
-        if equipe is None:
+        if not equipe:
+
             continue
 
         equipes_trouvees.append(equipe)
 
         if len(equipes_trouvees) < 2:
+
             continue
 
         domicile = equipes_trouvees[0]
+
         exterieur = equipes_trouvees[1]
 
         match = {
@@ -304,33 +307,154 @@ def extraire_matchs(texte, numero):
         if score_en_attente is not None:
 
             match["scoreDomicile"] = score_en_attente[0]
+
             match["scoreExterieur"] = score_en_attente[1]
 
         matchs.append(match)
 
-        # Réinitialisation pour le match suivant
         equipes_trouvees = []
+
         score_en_attente = None
+
         heure_actuelle = None
 
-    # Suppression des doublons
     matchs_uniques = []
+
     deja_vus = set()
 
     for match in matchs:
 
         if match["id"] in deja_vus:
+
             continue
 
         deja_vus.add(match["id"])
+
         matchs_uniques.append(match)
 
     return matchs_uniques
 
 
-def main():
+def cle_match(domicile, exterieur):
 
-    print("Ouverture du calendrier officiel...")
+    return frozenset([
+        normaliser_texte(domicile),
+        normaliser_texte(exterieur)
+    ])
+
+
+def extraire_matchs_rugbyrama(texte):
+
+    lignes = nettoyer_lignes(texte)
+
+    resultats = []
+
+    for i, ligne in enumerate(lignes):
+
+        heure = extraire_heure(ligne)
+
+        if not heure:
+
+            continue
+
+        equipes = []
+
+        debut = max(0, i - 8)
+
+        fin = min(len(lignes), i + 9)
+
+        for candidate in lignes[debut:fin]:
+
+            equipe = trouver_equipe(candidate)
+
+            if equipe and equipe not in equipes:
+
+                equipes.append(equipe)
+
+        if len(equipes) >= 2:
+
+            resultats.append({
+                "domicile": equipes[0],
+                "exterieur": equipes[1],
+                "heure": heure
+            })
+
+    resultats_uniques = []
+
+    deja_vus = set()
+
+    for match in resultats:
+
+        cle = (
+            cle_match(
+                match["domicile"],
+                match["exterieur"]
+            ),
+            match["heure"]
+        )
+
+        if cle in deja_vus:
+
+            continue
+
+        deja_vus.add(cle)
+
+        resultats_uniques.append(match)
+
+    return resultats_uniques
+
+
+def completer_heures(calendrier, horaires_rr):
+
+    index = {}
+
+    for item in horaires_rr:
+
+        cle = cle_match(
+            item["domicile"],
+            item["exterieur"]
+        )
+
+        if cle not in index:
+
+            index[cle] = []
+
+        index[cle].append(item["heure"])
+
+    complets = 0
+
+    for matchs in calendrier["journees"].values():
+
+        for match in matchs:
+
+            if match.get("heure"):
+
+                continue
+
+            heures = index.get(
+                cle_match(
+                    match["domicile"],
+                    match["exterieur"]
+                ),
+                []
+            )
+
+            heures = [
+                heure
+                for heure in heures
+                if heure != "00:00"
+            ]
+
+            if len(set(heures)) == 1:
+
+                match["heure"] = heures[0]
+
+                complets += 1
+
+    return complets
+
+
+def main():
 
     calendrier = {
         "source": BASE_URL,
@@ -353,42 +477,35 @@ def main():
 
         for numero in range(1, 31):
 
-            print()
-            print("=================================")
-            print()
-            print(f"Récupération de J{numero}...")
-
-            url = f"{BASE_URL}/j{numero}"
+            print(
+                f"\n===== Récupération de J{numero} ====="
+            )
 
             try:
 
                 page.goto(
-                    url,
+                    f"{BASE_URL}/j{numero}",
                     wait_until="networkidle",
                     timeout=60000
                 )
 
                 page.wait_for_timeout(5000)
 
-                page.evaluate("""
-                    window.scrollTo(
-                        0,
-                        document.body.scrollHeight
-                    );
-                """)
+                page.evaluate(
+                    "window.scrollTo(0, document.body.scrollHeight)"
+                )
 
                 page.wait_for_timeout(2000)
 
                 texte = page.locator("body").inner_text()
-                print(texte)
 
                 with open(
                     f"debug_J{numero}.txt",
                     "w",
                     encoding="utf-8"
-                ) as debug:
+                ) as fichier:
 
-                    debug.write(texte)
+                    fichier.write(texte)
 
                 matchs = extraire_matchs(
                     texte,
@@ -398,29 +515,73 @@ def main():
                 calendrier["journees"][f"J{numero}"] = matchs
 
                 print(
-                    f"✓ {len(matchs)} match(s) récupéré(s)"
+                    f"✓ {len(matchs)} match(s)"
                 )
-
-                for match in matchs:
-
-                    print(
-                        f"  {match['date']} | "
-                        f"{match['heure']} | "
-                        f"{match['domicile']} - "
-                        f"{match['exterieur']} | "
-                        f"{match['scoreDomicile']} - "
-                        f"{match['scoreExterieur']}"
-                    )
 
             except Exception as erreur:
 
                 print(
-                    f"⚠ Erreur sur J{numero} : {erreur}"
+                    f"⚠ Erreur J{numero}: {erreur}"
                 )
 
                 calendrier["journees"][f"J{numero}"] = []
 
+        print(
+            "\n===== Complément des heures avec Rugbyrama ====="
+        )
+
+        horaires_rr = []
+
+        try:
+
+            page.goto(
+                RUGBYRAMA_URL,
+                wait_until="domcontentloaded",
+                timeout=60000
+            )
+
+            page.wait_for_timeout(7000)
+
+            page.evaluate(
+                "window.scrollTo(0, document.body.scrollHeight)"
+            )
+
+            page.wait_for_timeout(2000)
+
+            texte_rr = page.locator("body").inner_text()
+
+            with open(
+                "debug_rugbyrama.txt",
+                "w",
+                encoding="utf-8"
+            ) as fichier:
+
+                fichier.write(texte_rr)
+
+            horaires_rr = extraire_matchs_rugbyrama(
+                texte_rr
+            )
+
+            print(
+                f"✓ {len(horaires_rr)} horaire(s) candidat(s) trouvé(s)"
+            )
+
+        except Exception as erreur:
+
+            print(
+                f"⚠ Rugbyrama ignoré: {erreur}"
+            )
+
         browser.close()
+
+    complets = completer_heures(
+        calendrier,
+        horaires_rr
+    )
+
+    print(
+        f"✓ {complets} heure(s) complétée(s) depuis Rugbyrama"
+    )
 
     with open(
         "calendrier.json",
@@ -435,12 +596,9 @@ def main():
             indent=4
         )
 
-    print()
-    print("=================================")
-    print()
-    print("✓ calendrier.json créé")
-    print()
-    print("=================================")
+    print(
+        "✓ calendrier.json créé"
+    )
 
 
 if __name__ == "__main__":
