@@ -7,8 +7,8 @@ on:
 
   schedule:
   # Jeudi
-  - cron: "30 19 * * 4"  # Jeudi 21h30 France
-  - cron: "30 21 * * 4"  # Jeudi 23h30 France
+  - cron: "20 21 * * 4"  # Jeudi 21h30 France
+  - cron: "40 21 * * 4"  # Jeudi 23h30 France
 
   # Vendredi
   - cron: "40 19 * * 5"  # Vendredi 21h40 France
