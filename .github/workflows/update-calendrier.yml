@@ -11,6 +11,7 @@ on:
   - cron: "40 21 * * 4"  # Jeudi 23h30 France
 
   # Vendredi
+  - cron: "00 17 * * 5" # Vendredi 19h France
   - cron: "00 18 * * 5" # Vendredi 20h France
   - cron: "00 19 * * 5"  # Vendredi 21h France
   - cron: "00 20 * * 5" # Vendredi 22h00 France
