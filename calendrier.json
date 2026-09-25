@@ -348,8 +348,8 @@
                 "heure": "19:00",
                 "domicile": "AS Béziers Hérault",
                 "exterieur": "RC Narbonnais",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 34,
+                "scoreExterieur": 24
             },
             {
                 "id": "J5_PROVENCE_RUGBY_STADE_AURILLACOIS_VENDREDI_25_SEPTEMBRE",
@@ -358,8 +358,8 @@
                 "heure": "19:30",
                 "domicile": "Provence Rugby",
                 "exterieur": "Stade Aurillacois",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 24,
+                "scoreExterieur": 20
             },
             {
                 "id": "J5_SOYAUX_ANGOULEME_XV_SU_AGEN_VENDREDI_25_SEPTEMBRE",
@@ -368,8 +368,8 @@
                 "heure": "19:30",
                 "domicile": "Soyaux-Angoulême XV",
                 "exterieur": "SU Agen",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 36,
+                "scoreExterieur": 22
             },
             {
                 "id": "J5_BIARRITZ_OLYMPIQUE_PB_US_MONTAUBAN_VENDREDI_25_SEPTEMBRE",
@@ -378,8 +378,8 @@
                 "heure": "19:30",
                 "domicile": "Biarritz Olympique PB",
                 "exterieur": "US Montauban",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 32,
+                "scoreExterieur": 20
             },
             {
                 "id": "J5_US_DAX_NISSA_RUGBY_VENDREDI_25_SEPTEMBRE",
@@ -388,8 +388,8 @@
                 "heure": "19:30",
                 "domicile": "US Dax",
                 "exterieur": "Nissa Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 45,
+                "scoreExterieur": 17
             },
             {
                 "id": "J5_OYONNAX_RUGBY_USON_NEVERS_VENDREDI_25_SEPTEMBRE",
@@ -398,8 +398,8 @@
                 "heure": "19:30",
                 "domicile": "Oyonnax Rugby",
                 "exterieur": "USON Nevers",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 56,
+                "scoreExterieur": 35
             },
             {
                 "id": "J5_FC_GRENOBLE_RUGBY_VALENCE_ROMANS_VENDREDI_25_SEPTEMBRE",
