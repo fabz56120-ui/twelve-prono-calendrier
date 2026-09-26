@@ -14,7 +14,14 @@ on:
   - cron: "00 16 * * 5" # Vendredi 19h France
   - cron: "00 17 * * 5"  # Vendredi 20h40 France
   - cron: "00 18 * * 5"  # Vendredi 21h30 France
-  - cron: "30 18 * * 5"  # Vendredi 23h30   # Vendredi 23h30 Francerance
+  - cron: "30 18 * * 5"  # Vendredi 23h30   
+
+  # SamediTEST
+  - cron: "00 16 * * 5" # Vendredi 18h France
+  - cron: "00 17 * * 5"  # Vendredi 19h France
+  - cron: "00 18 * * 5"  # Vendredi 20h France
+  - cron: "30 20 * * 5"  # Vendredi 22h30   
+  
 permissions:
   contents: write
 
