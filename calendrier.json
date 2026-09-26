@@ -408,8 +408,8 @@
                 "heure": "21:00",
                 "domicile": "FC Grenoble Rugby",
                 "exterieur": "Valence Romans",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 20,
+                "scoreExterieur": 17
             }
         ],
         "J6": [
