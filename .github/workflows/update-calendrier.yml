@@ -17,9 +17,9 @@ on:
   - cron: "30 18 * * 5"  # Vendredi 23h30   
 
   # SamediTEST
-  - cron: "00 12 * * 6" # Vendredi 18h France
-  - cron: "00 13 * * 6"  # Vendredi 19h France
-  - cron: "00 14 * * 6"  # Vendredi 20h France
+  - cron: "07 19 * * 6" # Samedi 21h
+  - cron: "12 20 * * 6"  # Samedi 22h
+  - cron: "12 21 * * 6"  # Samedi 23h
   
   
 permissions:
