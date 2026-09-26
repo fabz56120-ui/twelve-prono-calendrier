@@ -7,14 +7,14 @@ on:
 
   schedule:
   #   # Jeudi
-  - cron: "10 18 * * 4"  # Jeudi 23h20 France
-  - cron: "40 18 * * 4"  # Jeudi 23h40 France
+  - cron: "10 18 * * 4"  # Jeudi 20h10 France
+  - cron: "40 18 * * 4"  # Jeudi 20h40 France
 
   # Vendredi
-  - cron: "00 16 * * 5" # Vendredi 19h France
-  - cron: "00 17 * * 5"  # Vendredi 20h40 France
-  - cron: "00 18 * * 5"  # Vendredi 21h30 France
-  - cron: "30 18 * * 5"  # Vendredi 23h30   
+  - cron: "12 16 * * 5" # Vendredi 18h12 France
+  - cron: "12 17 * * 5"  # Vendredi 19h12 France
+  - cron: "12 18 * * 5"  # Vendredi 20h12 France
+  - cron: "17 19 * * 5"  # Vendredi 21h17   
 
   # SamediTEST
   - cron: "07 19 * * 6" # Samedi 21h
