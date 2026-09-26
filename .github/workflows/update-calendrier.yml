@@ -7,6 +7,7 @@ on:
 
   schedule:
   #   # Jeudi
+  - cron: "12 17 * * 4"  # Jeudi 19h12 France
   - cron: "10 18 * * 4"  # Jeudi 20h10 France
   - cron: "40 18 * * 4"  # Jeudi 20h40 France
 
