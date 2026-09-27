@@ -18,9 +18,9 @@ on:
   - cron: "17 19 * * 5"  # Vendredi 21h17   
 
   # DimancheTEST
-  - cron: "27 09 * * 6" # D 11h decalage 3h
-  - cron: "12 10 * * 6"  # D 12h
-  - cron: "12 11 * * 6"  # D 13h
+  - cron: "27 07 * * 6" # D 11h decalage 3h
+  - cron: "12 08 * * 6"  # D 12h
+  - cron: "12 09 * * 6"  # D 13h
   
   
 permissions:
