@@ -17,10 +17,10 @@ on:
   - cron: "12 18 * * 5"  # Vendredi 20h12 France
   - cron: "17 19 * * 5"  # Vendredi 21h17   
 
-  # SamediTEST
-  - cron: "07 19 * * 6" # Samedi 21h
-  - cron: "12 20 * * 6"  # Samedi 22h
-  - cron: "12 21 * * 6"  # Samedi 23h
+  # DimancheTEST
+  - cron: "27 09 * * 6" # D 11h decalage 3h
+  - cron: "12 10 * * 6"  # D 12h
+  - cron: "12 11 * * 6"  # D 13h
   
   
 permissions:
