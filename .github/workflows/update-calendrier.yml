@@ -17,11 +17,7 @@ on:
   - cron: "12 18 * * 5"  # Vendredi 20h12 France
   - cron: "17 19 * * 5"  # Vendredi 21h17   
 
-  # DimancheTEST
-  - cron: "27 07 * * 6" # D 12h27 decalage 3h
-  - cron: "12 08 * * 6"  # D 13h08
-  - cron: "26 08 * * 6"  # D 13h26
-  
+ 
   
 permissions:
   contents: write
