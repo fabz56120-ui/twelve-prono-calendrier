@@ -6,17 +6,27 @@ on:
   workflow_dispatch:
 
   schedule:
-  #   # Jeudi
-  - cron: "12 17 * * 4"  # Jeudi 19h12 France
-  - cron: "10 18 * * 4"  # Jeudi 20h10 France
-  - cron: "00 19 * * 4"  # Jeudi 20h40 France
+    # Jeudi
+    - cron: "40 16 * * 4"
+      timezone: "Europe/Paris"
+    - cron: "12 17 * * 4"
+      timezone: "Europe/Paris"
+    - cron: "10 18 * * 4"
+      timezone: "Europe/Paris"
+    - cron: "00 19 * * 4"
+      timezone: "Europe/Paris"
 
-  # Vendredi
-  - cron: "12 16 * * 5" # Vendredi 18h12 France
-  - cron: "12 17 * * 5"  # Vendredi 19h12 France
-  - cron: "12 18 * * 5"  # Vendredi 20h12 France
-  - cron: "17 19 * * 5"  # Vendredi 21h17  
-  - cron: "17 20 * * 5"  # Vendredi 21h17 
+    # Vendredi
+    - cron: "30 19 * * 5"
+      timezone: "Europe/Paris"
+    - cron: "00 20 * * 5"
+      timezone: "Europe/Paris"
+    - cron: "30 20 * * 5"
+      timezone: "Europe/Paris"
+    - cron: "00 21 * * 5"
+      timezone: "Europe/Paris"
+    - cron: "00 23 * * 5"
+      timezone: "Europe/Paris"
 
  
   
