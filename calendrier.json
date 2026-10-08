@@ -420,8 +420,8 @@
                 "heure": "21:00",
                 "domicile": "US Montauban",
                 "exterieur": "CA Brive",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 32,
+                "scoreExterieur": 24
             },
             {
                 "id": "J6_SOYAUX_ANGOULEME_XV_PROVENCE_RUGBY_VENDREDI_09_OCTOBRE",
@@ -2333,7 +2333,7 @@
                 "id": "J29_CA_BRIVE_US_MONTAUBAN_JEUDI_06_MAI_VENDREDI_07_MAI",
                 "journee": "J29",
                 "date": "JEUDI 06 MAI – VENDREDI 07 MAI",
-                "heure": null,
+                "heure": "21:00",
                 "domicile": "CA Brive",
                 "exterieur": "US Montauban",
                 "scoreDomicile": null,
