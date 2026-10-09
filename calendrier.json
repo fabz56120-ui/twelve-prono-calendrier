@@ -430,8 +430,8 @@
                 "heure": "19:00",
                 "domicile": "Soyaux-Angoulême XV",
                 "exterieur": "Provence Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 26,
+                "scoreExterieur": 28
             },
             {
                 "id": "J6_SU_AGEN_US_DAX_VENDREDI_09_OCTOBRE",
@@ -440,8 +440,8 @@
                 "heure": "19:30",
                 "domicile": "SU Agen",
                 "exterieur": "US Dax",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 49,
+                "scoreExterieur": 30
             },
             {
                 "id": "J6_RC_NARBONNAIS_OYONNAX_RUGBY_VENDREDI_09_OCTOBRE",
@@ -450,8 +450,8 @@
                 "heure": "19:30",
                 "domicile": "RC Narbonnais",
                 "exterieur": "Oyonnax Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 14,
+                "scoreExterieur": 57
             },
             {
                 "id": "J6_NISSA_RUGBY_USON_NEVERS_VENDREDI_09_OCTOBRE",
@@ -460,8 +460,8 @@
                 "heure": "19:30",
                 "domicile": "Nissa Rugby",
                 "exterieur": "USON Nevers",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 32,
+                "scoreExterieur": 17
             },
             {
                 "id": "J6_VALENCE_ROMANS_AS_BEZIERS_HERAULT_VENDREDI_09_OCTOBRE",
@@ -470,8 +470,8 @@
                 "heure": "19:30",
                 "domicile": "Valence Romans",
                 "exterieur": "AS Béziers Hérault",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 47,
+                "scoreExterieur": 20
             },
             {
                 "id": "J6_STADE_AURILLACOIS_BIARRITZ_OLYMPIQUE_PB_VENDREDI_09_OCTOBRE",
@@ -480,8 +480,8 @@
                 "heure": "21:00",
                 "domicile": "Stade Aurillacois",
                 "exterieur": "Biarritz Olympique PB",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 52,
+                "scoreExterieur": 33
             },
             {
                 "id": "J6_FC_GRENOBLE_RUGBY_COLOMIERS_RUGBY_VENDREDI_09_OCTOBRE",
@@ -490,8 +490,8 @@
                 "heure": "21:00",
                 "domicile": "FC Grenoble Rugby",
                 "exterieur": "Colomiers Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 23,
+                "scoreExterieur": 20
             }
         ],
         "J7": [
