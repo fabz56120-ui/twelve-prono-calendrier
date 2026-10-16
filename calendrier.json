@@ -502,8 +502,8 @@
                 "heure": "19:00",
                 "domicile": "Oyonnax Rugby",
                 "exterieur": "Valence Romans",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 51,
+                "scoreExterieur": 25
             },
             {
                 "id": "J7_AS_BEZIERS_HERAULT_STADE_AURILLACOIS_VENDREDI_16_OCTOBRE",
@@ -512,8 +512,8 @@
                 "heure": "19:30",
                 "domicile": "AS Béziers Hérault",
                 "exterieur": "Stade Aurillacois",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 24,
+                "scoreExterieur": 25
             },
             {
                 "id": "J7_COLOMIERS_RUGBY_RC_NARBONNAIS_VENDREDI_16_OCTOBRE",
@@ -522,8 +522,8 @@
                 "heure": "19:30",
                 "domicile": "Colomiers Rugby",
                 "exterieur": "RC Narbonnais",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 49,
+                "scoreExterieur": 28
             },
             {
                 "id": "J7_US_DAX_US_MONTAUBAN_VENDREDI_16_OCTOBRE",
@@ -532,8 +532,8 @@
                 "heure": "19:30",
                 "domicile": "US Dax",
                 "exterieur": "US Montauban",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 54,
+                "scoreExterieur": 28
             },
             {
                 "id": "J7_NISSA_RUGBY_PROVENCE_RUGBY_VENDREDI_16_OCTOBRE",
@@ -542,8 +542,8 @@
                 "heure": "19:30",
                 "domicile": "Nissa Rugby",
                 "exterieur": "Provence Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 24,
+                "scoreExterieur": 34
             },
             {
                 "id": "J7_BIARRITZ_OLYMPIQUE_PB_SOYAUX_ANGOULEME_XV_VENDREDI_16_OCTOBRE",
