@@ -552,8 +552,8 @@
                 "heure": "21:00",
                 "domicile": "Biarritz Olympique PB",
                 "exterieur": "Soyaux-Angoulême XV",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 27,
+                "scoreExterieur": 27
             },
             {
                 "id": "J7_USON_NEVERS_SU_AGEN_VENDREDI_16_OCTOBRE",
@@ -562,8 +562,8 @@
                 "heure": "21:00",
                 "domicile": "USON Nevers",
                 "exterieur": "SU Agen",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 7,
+                "scoreExterieur": 38
             },
             {
                 "id": "J7_CA_BRIVE_FC_GRENOBLE_RUGBY_SAMEDI_17_OCTOBRE",
