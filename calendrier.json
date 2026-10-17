@@ -572,8 +572,8 @@
                 "heure": "21:00",
                 "domicile": "CA Brive",
                 "exterieur": "FC Grenoble Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 14,
+                "scoreExterieur": 26
             }
         ],
         "J8": [
