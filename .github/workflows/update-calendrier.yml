@@ -28,7 +28,17 @@ on:
     - cron: "00 23 * * 5"
       timezone: "Europe/Paris"
 
- 
+  # Samedi
+    - cron: "30 19 * * 6"
+      timezone: "Europe/Paris"
+    - cron: "00 20 * * 6"
+      timezone: "Europe/Paris"
+    - cron: "30 20 * * 6"
+      timezone: "Europe/Paris"
+    - cron: "00 21 * * 6"
+      timezone: "Europe/Paris"
+    - cron: "00 23 * * 6"
+      timezone: "Europe/Paris"
   
 permissions:
   contents: write
