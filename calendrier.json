@@ -1635,7 +1635,7 @@
                 "id": "J20_OYONNAX_RUGBY_US_MONTAUBAN_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
-                "heure": "21:00",
+                "heure": null,
                 "domicile": "Oyonnax Rugby",
                 "exterieur": "US Montauban",
                 "scoreDomicile": null,
