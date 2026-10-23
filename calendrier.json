@@ -604,8 +604,8 @@
                 "heure": "19:30",
                 "domicile": "SU Agen",
                 "exterieur": "Nissa Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 28,
+                "scoreExterieur": 24
             },
             {
                 "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_VENDREDI_23_OCTOBRE",
@@ -614,8 +614,8 @@
                 "heure": "19:30",
                 "domicile": "Soyaux-Angoulême XV",
                 "exterieur": "US Dax",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 49,
+                "scoreExterieur": 7
             },
             {
                 "id": "J8_STADE_AURILLACOIS_USON_NEVERS_VENDREDI_23_OCTOBRE",
@@ -624,8 +624,8 @@
                 "heure": "19:30",
                 "domicile": "Stade Aurillacois",
                 "exterieur": "USON Nevers",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 41,
+                "scoreExterieur": 16
             },
             {
                 "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_VENDREDI_23_OCTOBRE",
@@ -634,8 +634,8 @@
                 "heure": "19:30",
                 "domicile": "Valence Romans",
                 "exterieur": "Colomiers Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 28,
+                "scoreExterieur": 23
             },
             {
                 "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_23_OCTOBRE",
