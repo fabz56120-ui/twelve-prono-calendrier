@@ -644,8 +644,8 @@
                 "heure": "21:00",
                 "domicile": "Provence Rugby",
                 "exterieur": "AS Béziers Hérault",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 54,
+                "scoreExterieur": 3
             },
             {
                 "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_VENDREDI_23_OCTOBRE",
@@ -654,8 +654,8 @@
                 "heure": "21:00",
                 "domicile": "FC Grenoble Rugby",
                 "exterieur": "Biarritz Olympique PB",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 24,
+                "scoreExterieur": 10
             }
         ],
         "J9": [
