@@ -1,19 +1,17 @@
 
-
 name: Mise à jour calendrier PRO D2
 
 on:
   workflow_dispatch:
 
   schedule:
-    # Jeudii
+    # Jeudi
     - cron: "12 19 * * 4"
       timezone: "Europe/Paris"
     - cron: "10 21 * * 4"
       timezone: "Europe/Paris"
     - cron: "00 22 * * 4"
       timezone: "Europe/Paris"
-    
 
     # Vendredi
     - cron: "30 19 * * 5"
@@ -27,7 +25,7 @@ on:
     - cron: "00 23 * * 5"
       timezone: "Europe/Paris"
 
-  # Samedi
+    # Samedi
     - cron: "30 19 * * 6"
       timezone: "Europe/Paris"
     - cron: "00 20 * * 6"
@@ -38,7 +36,7 @@ on:
       timezone: "Europe/Paris"
     - cron: "00 23 * * 6"
       timezone: "Europe/Paris"
-  
+
 permissions:
   contents: write
 
@@ -49,6 +47,8 @@ jobs:
     steps:
       - name: Récupération du dépôt
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Installation de Python
         uses: actions/setup-python@v5
@@ -76,5 +76,7 @@ jobs:
             echo "Aucune modification du calendrier."
           else
             git commit -m "Mise à jour automatique du calendrier"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
+          
