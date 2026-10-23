@@ -584,8 +584,8 @@
                 "heure": "21:00",
                 "domicile": "US Montauban",
                 "exterieur": "Oyonnax Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 24,
+                "scoreExterieur": 23
             },
             {
                 "id": "J8_RC_NARBONNAIS_CA_BRIVE_VENDREDI_23_OCTOBRE",
@@ -594,8 +594,8 @@
                 "heure": "19:00",
                 "domicile": "RC Narbonnais",
                 "exterieur": "CA Brive",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 34,
+                "scoreExterieur": 26
             },
             {
                 "id": "J8_SU_AGEN_NISSA_RUGBY_VENDREDI_23_OCTOBRE",
@@ -1635,7 +1635,7 @@
                 "id": "J20_OYONNAX_RUGBY_US_MONTAUBAN_JEUDI_11_FEVRIER_VENDREDI_12_FEVRIER",
                 "journee": "J20",
                 "date": "JEUDI 11 FÉVRIER – VENDREDI 12 FÉVRIER",
-                "heure": null,
+                "heure": "21:00",
                 "domicile": "Oyonnax Rugby",
                 "exterieur": "US Montauban",
                 "scoreDomicile": null,
