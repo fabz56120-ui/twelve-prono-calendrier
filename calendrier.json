@@ -676,8 +676,8 @@
                 "heure": "19:00",
                 "domicile": "Colomiers Rugby",
                 "exterieur": "SU Agen",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 37,
+                "scoreExterieur": 19
             },
             {
                 "id": "J9_AS_BEZIERS_HERAULT_FC_GRENOBLE_RUGBY_VENDREDI_30_OCTOBRE",
@@ -686,8 +686,8 @@
                 "heure": "19:30",
                 "domicile": "AS Béziers Hérault",
                 "exterieur": "FC Grenoble Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 25,
+                "scoreExterieur": 27
             },
             {
                 "id": "J9_US_MONTAUBAN_RC_NARBONNAIS_VENDREDI_30_OCTOBRE",
@@ -696,8 +696,8 @@
                 "heure": "19:30",
                 "domicile": "US Montauban",
                 "exterieur": "RC Narbonnais",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 33,
+                "scoreExterieur": 28
             },
             {
                 "id": "J9_NISSA_RUGBY_STADE_AURILLACOIS_VENDREDI_30_OCTOBRE",
@@ -706,8 +706,8 @@
                 "heure": "19:30",
                 "domicile": "Nissa Rugby",
                 "exterieur": "Stade Aurillacois",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 29,
+                "scoreExterieur": 20
             },
             {
                 "id": "J9_OYONNAX_RUGBY_SOYAUX_ANGOULEME_XV_VENDREDI_30_OCTOBRE",
@@ -716,8 +716,8 @@
                 "heure": "19:30",
                 "domicile": "Oyonnax Rugby",
                 "exterieur": "Soyaux-Angoulême XV",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 22,
+                "scoreExterieur": 13
             },
             {
                 "id": "J9_BIARRITZ_OLYMPIQUE_PB_VALENCE_ROMANS_VENDREDI_30_OCTOBRE",
@@ -726,8 +726,8 @@
                 "heure": "21:00",
                 "domicile": "Biarritz Olympique PB",
                 "exterieur": "Valence Romans",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 34,
+                "scoreExterieur": 30
             },
             {
                 "id": "J9_USON_NEVERS_CA_BRIVE_VENDREDI_30_OCTOBRE",
@@ -736,8 +736,8 @@
                 "heure": "21:00",
                 "domicile": "USON Nevers",
                 "exterieur": "CA Brive",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 12,
+                "scoreExterieur": 33
             }
         ],
         "J10": [
