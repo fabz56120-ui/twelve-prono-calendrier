@@ -55,12 +55,11 @@ def nettoyer_lignes(texte):
     return [nettoyer_ligne(l) for l in texte.splitlines() if nettoyer_ligne(l)]
 
 
-def creer_match_id(journee, domicile, exterieur, date):
+def creer_match_id(journee, domicile, exterieur, date=None):
     return "_".join([
         normaliser_texte(journee),
         normaliser_texte(domicile),
-        normaliser_texte(exterieur),
-        normaliser_texte(date)
+        normaliser_texte(exterieur)
     ])
 
 
