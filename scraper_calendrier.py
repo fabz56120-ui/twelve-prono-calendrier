@@ -1,4 +1,165 @@
-for i, ligne in enumerate(lignes):
+from playwright.sync_api import sync_playwright
+import json
+import re
+import unicodedata
+from datetime import datetime
+
+BASE_URL = "https://prod2.lnr.fr/calendrier-et-resultats/2026-2027"
+RUGBYRAMA_URL = "https://www.rugbyrama.fr/resultats/rugby/pro-d2/calendrier"
+
+EQUIVALENCES_RUGBYRAMA = {
+    "BIARRITZ": "Biarritz Olympique PB",
+    "NICE": "Nissa Rugby",
+    "ANGOULEME": "Soyaux-Angoulême XV",
+    "COLOMIERS": "Colomiers Rugby",
+    "BEZIERS": "AS Béziers Hérault",
+    "OYONNAX": "Oyonnax Rugby",
+    "GRENOBLE": "FC Grenoble Rugby",
+    "AURILLAC": "Stade Aurillacois",
+    "NEVERS": "USON Nevers",
+    "MONTAUBAN": "US Montauban",
+    "DAX": "US Dax",
+    "NARBONNE": "RC Narbonnais",
+    "PROVENCE RUGBY": "Provence Rugby",
+    "AGEN": "SU Agen",
+    "BRIVE": "CA Brive",
+    "VALENCE ROMANS": "Valence Romans",
+}
+
+EQUIPES = [
+    "Biarritz Olympique PB", "Colomiers Rugby", "Soyaux-Angoulême XV",
+    "US Montauban", "Provence Rugby", "RC Narbonnais",
+    "AS Béziers Hérault", "USON Nevers", "CA Brive", "Nissa Rugby",
+    "US Dax", "Valence Romans", "Oyonnax Rugby", "Stade Aurillacois",
+    "FC Grenoble Rugby", "SU Agen"
+]
+
+
+def normaliser_texte(texte):
+    if not texte:
+        return ""
+    texte = unicodedata.normalize("NFD", texte)
+    texte = "".join(c for c in texte if unicodedata.category(c) != "Mn")
+    texte = texte.upper()
+    return re.sub(r"[^A-Z0-9]+", "_", texte).strip("_")
+
+
+def nettoyer_ligne(ligne):
+    if not ligne:
+        return ""
+    ligne = ligne.replace("**", "")
+    ligne = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", ligne)
+    return ligne.replace("\xa0", " ").strip()
+
+
+def nettoyer_lignes(texte):
+    return [nettoyer_ligne(l) for l in texte.splitlines() if nettoyer_ligne(l)]
+
+
+def creer_match_id(journee, domicile, exterieur, date):
+    return "_".join([normaliser_texte(journee), normaliser_texte(domicile),
+                      normaliser_texte(exterieur), normaliser_texte(date)])
+
+
+def extraire_section_journee(texte, numero):
+    motifs = [f"JOURNÉE {numero}", f"JOURNEE {numero}",
+              f"Journée {numero}", f"Journee {numero}"]
+    position = next((texte.find(m) for m in motifs if texte.find(m) != -1), -1)
+    if position == -1:
+        return ""
+    section = texte[position:]
+    positions = [p for m in ["LES AVANTAGES", "NOS PARTENAIRES", "BON PLAN"]
+                 if (p := section.find(m)) != -1]
+    return section[:min(positions)] if positions else section
+
+
+def est_une_date(texte):
+    jours = "LUNDI MARDI MERCREDI JEUDI VENDREDI SAMEDI DIMANCHE".split()
+    texte = nettoyer_ligne(texte).upper()
+    return any(texte.startswith(j + " ") for j in jours)
+
+
+def extraire_heure(texte):
+    if not texte:
+        return None
+    m = re.search(r"(?<!\d)([01]?\d|2[0-3])\s*(?::|[hH])\s*([0-5]\d)(?!\d)", texte)
+    return f"{int(m.group(1)):02d}:{int(m.group(2)):02d}" if m else None
+
+
+def est_un_score(texte):
+    return re.fullmatch(r"\d+\s*-\s*\d+", texte.strip()) is not None
+
+
+def extraire_score(texte):
+    a, b = re.split(r"\s*-\s*", texte.strip())
+    return int(a), int(b)
+
+
+def trouver_equipe(texte):
+    n = normaliser_texte(texte)
+
+    for equipe in EQUIPES:
+        if normaliser_texte(equipe) == n:
+            return equipe
+
+    return EQUIVALENCES_RUGBYRAMA.get(n)
+
+
+def extraire_matchs(texte, numero):
+    section = extraire_section_journee(texte, numero)
+    if not section:
+        return []
+    matchs, date_actuelle, heure_actuelle = [], None, None
+    equipes_trouvees, score_en_attente = [], None
+    for ligne in nettoyer_lignes(section):
+        if est_une_date(ligne):
+            date_actuelle, heure_actuelle = ligne.upper(), extraire_heure(ligne)
+            equipes_trouvees, score_en_attente = [], None
+            continue
+        heure = extraire_heure(ligne)
+        if heure:
+            heure_actuelle = heure
+            continue
+        if est_un_score(ligne):
+            score_en_attente = extraire_score(ligne)
+            continue
+        equipe = trouver_equipe(ligne)
+        if not equipe:
+            continue
+        equipes_trouvees.append(equipe)
+        if len(equipes_trouvees) < 2:
+            continue
+        domicile, exterieur = equipes_trouvees[:2]
+        match = {
+            "id": creer_match_id(f"J{numero}", domicile, exterieur, date_actuelle or ""),
+            "journee": f"J{numero}", "date": date_actuelle,
+            "heure": heure_actuelle, "domicile": domicile, "exterieur": exterieur,
+            "scoreDomicile": score_en_attente[0] if score_en_attente else None,
+            "scoreExterieur": score_en_attente[1] if score_en_attente else None
+        }
+        matchs.append(match)
+        equipes_trouvees, score_en_attente, heure_actuelle = [], None, None
+    uniques, vus = [], set()
+    for match in matchs:
+        if match["id"] not in vus:
+            vus.add(match["id"])
+            uniques.append(match)
+    return uniques
+
+
+def cle_match(domicile, exterieur):
+    return frozenset((normaliser_texte(domicile), normaliser_texte(exterieur)))
+
+
+def extraire_matchs_rugbyrama(texte):
+    """
+    Extrait les horaires Rugbyrama en associant chaque heure
+    aux deux équipes suivantes du même bloc, jusqu'à la prochaine heure.
+    """
+    lignes = nettoyer_lignes(texte)
+    resultats = []
+
+    for i, ligne in enumerate(lignes):
         heure = extraire_heure(ligne)
         if not heure or heure == "00:00":
             continue
