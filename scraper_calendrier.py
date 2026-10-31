@@ -303,9 +303,7 @@ def fusionner_calendrier(ancien, nouveau):
             match = dict(ancien_match)
             match.update(nouveau_match)
 
-            # Préserver l'identifiant historique pour Firebase.
-            if ancien_match.get("id"):
-                match["id"] = ancien_match["id"]
+          
 
             # Ne jamais effacer une donnée existante avec une valeur vide.
             for champ in (
