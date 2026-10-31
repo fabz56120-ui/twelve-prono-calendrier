@@ -74,7 +74,7 @@
                 "scoreExterieur": 10
             },
             {
-                "id": "J1_CA_BRIVE_VALENCE_ROMANS_VENDREDI_28_AOUT",
+                "id": "J1_CA_BRIVE_VALENCE_ROMANS_JEUDI_27_AOUT",
                 "journee": "J1",
                 "date": "VENDREDI 28 AOÛT",
                 "heure": "21:00",
@@ -96,7 +96,7 @@
                 "scoreExterieur": 18
             },
             {
-                "id": "J2_US_MONTAUBAN_FC_GRENOBLE_RUGBY_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_US_MONTAUBAN_FC_GRENOBLE_RUGBY_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:00",
@@ -106,7 +106,7 @@
                 "scoreExterieur": 17
             },
             {
-                "id": "J2_STADE_AURILLACOIS_US_DAX_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_STADE_AURILLACOIS_US_DAX_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:30",
@@ -116,7 +116,7 @@
                 "scoreExterieur": 35
             },
             {
-                "id": "J2_RC_NARBONNAIS_USON_NEVERS_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_RC_NARBONNAIS_USON_NEVERS_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:30",
@@ -126,7 +126,7 @@
                 "scoreExterieur": 26
             },
             {
-                "id": "J2_NISSA_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_NISSA_RUGBY_AS_BEZIERS_HERAULT_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:30",
@@ -136,7 +136,7 @@
                 "scoreExterieur": 6
             },
             {
-                "id": "J2_OYONNAX_RUGBY_BIARRITZ_OLYMPIQUE_PB_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_OYONNAX_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:30",
@@ -146,7 +146,7 @@
                 "scoreExterieur": 25
             },
             {
-                "id": "J2_VALENCE_ROMANS_SOYAUX_ANGOULEME_XV_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_VALENCE_ROMANS_SOYAUX_ANGOULEME_XV_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "19:30",
@@ -156,7 +156,7 @@
                 "scoreExterieur": 22
             },
             {
-                "id": "J2_SU_AGEN_CA_BRIVE_VENDREDI_04_SEPTEMBRE",
+                "id": "J2_SU_AGEN_CA_BRIVE_JEUDI_03_SEPTEMBRE",
                 "journee": "J2",
                 "date": "VENDREDI 04 SEPTEMBRE",
                 "heure": "21:00",
@@ -178,7 +178,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J3_SOYAUX_ANGOULEME_XV_US_MONTAUBAN_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_SOYAUX_ANGOULEME_XV_US_MONTAUBAN_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:00",
@@ -188,7 +188,7 @@
                 "scoreExterieur": 7
             },
             {
-                "id": "J3_PROVENCE_RUGBY_RC_NARBONNAIS_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_PROVENCE_RUGBY_RC_NARBONNAIS_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:30",
@@ -198,7 +198,7 @@
                 "scoreExterieur": 42
             },
             {
-                "id": "J3_AS_BEZIERS_HERAULT_USON_NEVERS_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_AS_BEZIERS_HERAULT_USON_NEVERS_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:30",
@@ -208,7 +208,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J3_CA_BRIVE_NISSA_RUGBY_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_CA_BRIVE_NISSA_RUGBY_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:30",
@@ -218,7 +218,7 @@
                 "scoreExterieur": 17
             },
             {
-                "id": "J3_US_DAX_VALENCE_ROMANS_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_US_DAX_VALENCE_ROMANS_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:30",
@@ -228,7 +228,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J3_OYONNAX_RUGBY_STADE_AURILLACOIS_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_OYONNAX_RUGBY_STADE_AURILLACOIS_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "19:30",
@@ -238,7 +238,7 @@
                 "scoreExterieur": 17
             },
             {
-                "id": "J3_FC_GRENOBLE_RUGBY_SU_AGEN_VENDREDI_11_SEPTEMBRE",
+                "id": "J3_FC_GRENOBLE_RUGBY_SU_AGEN_JEUDI_10_SEPTEMBRE",
                 "journee": "J3",
                 "date": "VENDREDI 11 SEPTEMBRE",
                 "heure": "21:00",
@@ -260,7 +260,7 @@
                 "scoreExterieur": 29
             },
             {
-                "id": "J4_NISSA_RUGBY_FC_GRENOBLE_RUGBY_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_NISSA_RUGBY_FC_GRENOBLE_RUGBY_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:00",
@@ -270,7 +270,7 @@
                 "scoreExterieur": 37
             },
             {
-                "id": "J4_COLOMIERS_RUGBY_US_DAX_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_COLOMIERS_RUGBY_US_DAX_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:30",
@@ -280,7 +280,7 @@
                 "scoreExterieur": 21
             },
             {
-                "id": "J4_US_MONTAUBAN_AS_BEZIERS_HERAULT_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_US_MONTAUBAN_AS_BEZIERS_HERAULT_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:30",
@@ -290,7 +290,7 @@
                 "scoreExterieur": 21
             },
             {
-                "id": "J4_RC_NARBONNAIS_SOYAUX_ANGOULEME_XV_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_RC_NARBONNAIS_SOYAUX_ANGOULEME_XV_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:30",
@@ -300,7 +300,7 @@
                 "scoreExterieur": 26
             },
             {
-                "id": "J4_USON_NEVERS_BIARRITZ_OLYMPIQUE_PB_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_USON_NEVERS_BIARRITZ_OLYMPIQUE_PB_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:30",
@@ -310,7 +310,7 @@
                 "scoreExterieur": 22
             },
             {
-                "id": "J4_VALENCE_ROMANS_PROVENCE_RUGBY_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_VALENCE_ROMANS_PROVENCE_RUGBY_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "19:30",
@@ -320,7 +320,7 @@
                 "scoreExterieur": 27
             },
             {
-                "id": "J4_SU_AGEN_OYONNAX_RUGBY_VENDREDI_18_SEPTEMBRE",
+                "id": "J4_SU_AGEN_OYONNAX_RUGBY_JEUDI_17_SEPTEMBRE",
                 "journee": "J4",
                 "date": "VENDREDI 18 SEPTEMBRE",
                 "heure": "21:00",
@@ -342,7 +342,7 @@
                 "scoreExterieur": 26
             },
             {
-                "id": "J5_AS_BEZIERS_HERAULT_RC_NARBONNAIS_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_AS_BEZIERS_HERAULT_RC_NARBONNAIS_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:00",
@@ -352,7 +352,7 @@
                 "scoreExterieur": 24
             },
             {
-                "id": "J5_PROVENCE_RUGBY_STADE_AURILLACOIS_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_PROVENCE_RUGBY_STADE_AURILLACOIS_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:30",
@@ -362,7 +362,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J5_SOYAUX_ANGOULEME_XV_SU_AGEN_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_SOYAUX_ANGOULEME_XV_SU_AGEN_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:30",
@@ -372,7 +372,7 @@
                 "scoreExterieur": 22
             },
             {
-                "id": "J5_BIARRITZ_OLYMPIQUE_PB_US_MONTAUBAN_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_BIARRITZ_OLYMPIQUE_PB_US_MONTAUBAN_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:30",
@@ -382,7 +382,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J5_US_DAX_NISSA_RUGBY_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_US_DAX_NISSA_RUGBY_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:30",
@@ -392,7 +392,7 @@
                 "scoreExterieur": 17
             },
             {
-                "id": "J5_OYONNAX_RUGBY_USON_NEVERS_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_OYONNAX_RUGBY_USON_NEVERS_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "19:30",
@@ -402,7 +402,7 @@
                 "scoreExterieur": 35
             },
             {
-                "id": "J5_FC_GRENOBLE_RUGBY_VALENCE_ROMANS_VENDREDI_25_SEPTEMBRE",
+                "id": "J5_FC_GRENOBLE_RUGBY_VALENCE_ROMANS_JEUDI_24_SEPTEMBRE",
                 "journee": "J5",
                 "date": "VENDREDI 25 SEPTEMBRE",
                 "heure": "21:00",
@@ -424,7 +424,7 @@
                 "scoreExterieur": 24
             },
             {
-                "id": "J6_SOYAUX_ANGOULEME_XV_PROVENCE_RUGBY_VENDREDI_09_OCTOBRE",
+                "id": "J6_SOYAUX_ANGOULEME_XV_PROVENCE_RUGBY_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "19:00",
@@ -434,7 +434,7 @@
                 "scoreExterieur": 28
             },
             {
-                "id": "J6_SU_AGEN_US_DAX_VENDREDI_09_OCTOBRE",
+                "id": "J6_SU_AGEN_US_DAX_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "19:30",
@@ -444,7 +444,7 @@
                 "scoreExterieur": 30
             },
             {
-                "id": "J6_RC_NARBONNAIS_OYONNAX_RUGBY_VENDREDI_09_OCTOBRE",
+                "id": "J6_RC_NARBONNAIS_OYONNAX_RUGBY_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "19:30",
@@ -454,7 +454,7 @@
                 "scoreExterieur": 57
             },
             {
-                "id": "J6_NISSA_RUGBY_USON_NEVERS_VENDREDI_09_OCTOBRE",
+                "id": "J6_NISSA_RUGBY_USON_NEVERS_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "19:30",
@@ -464,7 +464,7 @@
                 "scoreExterieur": 17
             },
             {
-                "id": "J6_VALENCE_ROMANS_AS_BEZIERS_HERAULT_VENDREDI_09_OCTOBRE",
+                "id": "J6_VALENCE_ROMANS_AS_BEZIERS_HERAULT_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "19:30",
@@ -474,7 +474,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J6_STADE_AURILLACOIS_BIARRITZ_OLYMPIQUE_PB_VENDREDI_09_OCTOBRE",
+                "id": "J6_STADE_AURILLACOIS_BIARRITZ_OLYMPIQUE_PB_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "21:00",
@@ -484,7 +484,7 @@
                 "scoreExterieur": 33
             },
             {
-                "id": "J6_FC_GRENOBLE_RUGBY_COLOMIERS_RUGBY_VENDREDI_09_OCTOBRE",
+                "id": "J6_FC_GRENOBLE_RUGBY_COLOMIERS_RUGBY_JEUDI_08_OCTOBRE",
                 "journee": "J6",
                 "date": "VENDREDI 09 OCTOBRE",
                 "heure": "21:00",
@@ -566,7 +566,7 @@
                 "scoreExterieur": 38
             },
             {
-                "id": "J7_CA_BRIVE_FC_GRENOBLE_RUGBY_SAMEDI_17_OCTOBRE",
+                "id": "J7_CA_BRIVE_FC_GRENOBLE_RUGBY_VENDREDI_16_OCTOBRE",
                 "journee": "J7",
                 "date": "SAMEDI 17 OCTOBRE",
                 "heure": "21:00",
@@ -588,7 +588,7 @@
                 "scoreExterieur": 23
             },
             {
-                "id": "J8_RC_NARBONNAIS_CA_BRIVE_VENDREDI_23_OCTOBRE",
+                "id": "J8_RC_NARBONNAIS_CA_BRIVE_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "19:00",
@@ -598,7 +598,7 @@
                 "scoreExterieur": 26
             },
             {
-                "id": "J8_SU_AGEN_NISSA_RUGBY_VENDREDI_23_OCTOBRE",
+                "id": "J8_SU_AGEN_NISSA_RUGBY_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "19:30",
@@ -608,7 +608,7 @@
                 "scoreExterieur": 24
             },
             {
-                "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_VENDREDI_23_OCTOBRE",
+                "id": "J8_SOYAUX_ANGOULEME_XV_US_DAX_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "19:30",
@@ -618,7 +618,7 @@
                 "scoreExterieur": 7
             },
             {
-                "id": "J8_STADE_AURILLACOIS_USON_NEVERS_VENDREDI_23_OCTOBRE",
+                "id": "J8_STADE_AURILLACOIS_USON_NEVERS_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "19:30",
@@ -628,7 +628,7 @@
                 "scoreExterieur": 16
             },
             {
-                "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_VENDREDI_23_OCTOBRE",
+                "id": "J8_VALENCE_ROMANS_COLOMIERS_RUGBY_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "19:30",
@@ -638,7 +638,7 @@
                 "scoreExterieur": 23
             },
             {
-                "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_23_OCTOBRE",
+                "id": "J8_PROVENCE_RUGBY_AS_BEZIERS_HERAULT_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "21:00",
@@ -648,7 +648,7 @@
                 "scoreExterieur": 3
             },
             {
-                "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_VENDREDI_23_OCTOBRE",
+                "id": "J8_FC_GRENOBLE_RUGBY_BIARRITZ_OLYMPIQUE_PB_JEUDI_22_OCTOBRE",
                 "journee": "J8",
                 "date": "VENDREDI 23 OCTOBRE",
                 "heure": "21:00",
@@ -670,7 +670,7 @@
                 "scoreExterieur": 16
             },
             {
-                "id": "J9_COLOMIERS_RUGBY_SU_AGEN_VENDREDI_30_OCTOBRE",
+                "id": "J9_COLOMIERS_RUGBY_SU_AGEN_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "19:00",
@@ -680,7 +680,7 @@
                 "scoreExterieur": 19
             },
             {
-                "id": "J9_AS_BEZIERS_HERAULT_FC_GRENOBLE_RUGBY_VENDREDI_30_OCTOBRE",
+                "id": "J9_AS_BEZIERS_HERAULT_FC_GRENOBLE_RUGBY_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "19:30",
@@ -690,7 +690,7 @@
                 "scoreExterieur": 27
             },
             {
-                "id": "J9_US_MONTAUBAN_RC_NARBONNAIS_VENDREDI_30_OCTOBRE",
+                "id": "J9_US_MONTAUBAN_RC_NARBONNAIS_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "19:30",
@@ -700,7 +700,7 @@
                 "scoreExterieur": 28
             },
             {
-                "id": "J9_NISSA_RUGBY_STADE_AURILLACOIS_VENDREDI_30_OCTOBRE",
+                "id": "J9_NISSA_RUGBY_STADE_AURILLACOIS_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "19:30",
@@ -710,7 +710,7 @@
                 "scoreExterieur": 20
             },
             {
-                "id": "J9_OYONNAX_RUGBY_SOYAUX_ANGOULEME_XV_VENDREDI_30_OCTOBRE",
+                "id": "J9_OYONNAX_RUGBY_SOYAUX_ANGOULEME_XV_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "19:30",
@@ -720,7 +720,7 @@
                 "scoreExterieur": 13
             },
             {
-                "id": "J9_BIARRITZ_OLYMPIQUE_PB_VALENCE_ROMANS_VENDREDI_30_OCTOBRE",
+                "id": "J9_BIARRITZ_OLYMPIQUE_PB_VALENCE_ROMANS_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "21:00",
@@ -730,7 +730,7 @@
                 "scoreExterieur": 30
             },
             {
-                "id": "J9_USON_NEVERS_CA_BRIVE_VENDREDI_30_OCTOBRE",
+                "id": "J9_USON_NEVERS_CA_BRIVE_JEUDI_29_OCTOBRE",
                 "journee": "J9",
                 "date": "VENDREDI 30 OCTOBRE",
                 "heure": "21:00",
@@ -752,7 +752,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_CA_BRIVE_US_DAX_VENDREDI_06_NOVEMBRE",
+                "id": "J10_CA_BRIVE_US_DAX_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "19:10",
@@ -762,7 +762,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_STADE_AURILLACOIS_US_MONTAUBAN_VENDREDI_06_NOVEMBRE",
+                "id": "J10_STADE_AURILLACOIS_US_MONTAUBAN_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "19:30",
@@ -772,7 +772,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_COLOMIERS_RUGBY_AS_BEZIERS_HERAULT_VENDREDI_06_NOVEMBRE",
+                "id": "J10_COLOMIERS_RUGBY_AS_BEZIERS_HERAULT_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "19:30",
@@ -782,7 +782,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_RC_NARBONNAIS_NISSA_RUGBY_VENDREDI_06_NOVEMBRE",
+                "id": "J10_RC_NARBONNAIS_NISSA_RUGBY_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "19:30",
@@ -792,7 +792,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_VALENCE_ROMANS_USON_NEVERS_VENDREDI_06_NOVEMBRE",
+                "id": "J10_VALENCE_ROMANS_USON_NEVERS_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "19:30",
@@ -802,7 +802,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_SOYAUX_ANGOULEME_XV_FC_GRENOBLE_RUGBY_VENDREDI_06_NOVEMBRE",
+                "id": "J10_SOYAUX_ANGOULEME_XV_FC_GRENOBLE_RUGBY_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "21:00",
@@ -812,7 +812,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J10_PROVENCE_RUGBY_OYONNAX_RUGBY_VENDREDI_06_NOVEMBRE",
+                "id": "J10_PROVENCE_RUGBY_OYONNAX_RUGBY_JEUDI_05_NOVEMBRE",
                 "journee": "J10",
                 "date": "VENDREDI 06 NOVEMBRE",
                 "heure": "21:05",
@@ -834,7 +834,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_US_MONTAUBAN_SU_AGEN_VENDREDI_20_NOVEMBRE",
+                "id": "J11_US_MONTAUBAN_SU_AGEN_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "19:00",
@@ -844,7 +844,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_STADE_AURILLACOIS_COLOMIERS_RUGBY_VENDREDI_20_NOVEMBRE",
+                "id": "J11_STADE_AURILLACOIS_COLOMIERS_RUGBY_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "19:30",
@@ -854,7 +854,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_AS_BEZIERS_HERAULT_US_DAX_VENDREDI_20_NOVEMBRE",
+                "id": "J11_AS_BEZIERS_HERAULT_US_DAX_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "19:30",
@@ -864,7 +864,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_USON_NEVERS_SOYAUX_ANGOULEME_XV_VENDREDI_20_NOVEMBRE",
+                "id": "J11_USON_NEVERS_SOYAUX_ANGOULEME_XV_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "19:30",
@@ -874,7 +874,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_NISSA_RUGBY_VALENCE_ROMANS_VENDREDI_20_NOVEMBRE",
+                "id": "J11_NISSA_RUGBY_VALENCE_ROMANS_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "19:30",
@@ -884,7 +884,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_BIARRITZ_OLYMPIQUE_PB_RC_NARBONNAIS_VENDREDI_20_NOVEMBRE",
+                "id": "J11_BIARRITZ_OLYMPIQUE_PB_RC_NARBONNAIS_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "21:00",
@@ -894,7 +894,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J11_OYONNAX_RUGBY_CA_BRIVE_VENDREDI_20_NOVEMBRE",
+                "id": "J11_OYONNAX_RUGBY_CA_BRIVE_JEUDI_19_NOVEMBRE",
                 "journee": "J11",
                 "date": "VENDREDI 20 NOVEMBRE",
                 "heure": "21:00",
@@ -916,7 +916,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_US_DAX_OYONNAX_RUGBY_VENDREDI_27_NOVEMBRE",
+                "id": "J12_US_DAX_OYONNAX_RUGBY_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "19:00",
@@ -926,7 +926,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_SU_AGEN_AS_BEZIERS_HERAULT_VENDREDI_27_NOVEMBRE",
+                "id": "J12_SU_AGEN_AS_BEZIERS_HERAULT_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "19:30",
@@ -936,7 +936,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_SOYAUX_ANGOULEME_XV_NISSA_RUGBY_VENDREDI_27_NOVEMBRE",
+                "id": "J12_SOYAUX_ANGOULEME_XV_NISSA_RUGBY_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "19:30",
@@ -946,7 +946,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_COLOMIERS_RUGBY_USON_NEVERS_VENDREDI_27_NOVEMBRE",
+                "id": "J12_COLOMIERS_RUGBY_USON_NEVERS_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "19:30",
@@ -956,7 +956,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_VALENCE_ROMANS_STADE_AURILLACOIS_VENDREDI_27_NOVEMBRE",
+                "id": "J12_VALENCE_ROMANS_STADE_AURILLACOIS_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "19:30",
@@ -966,7 +966,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_PROVENCE_RUGBY_US_MONTAUBAN_VENDREDI_27_NOVEMBRE",
+                "id": "J12_PROVENCE_RUGBY_US_MONTAUBAN_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "21:00",
@@ -976,7 +976,7 @@
                 "scoreExterieur": null
             },
             {
-                "id": "J12_RC_NARBONNAIS_FC_GRENOBLE_RUGBY_VENDREDI_27_NOVEMBRE",
+                "id": "J12_RC_NARBONNAIS_FC_GRENOBLE_RUGBY_JEUDI_26_NOVEMBRE",
                 "journee": "J12",
                 "date": "VENDREDI 27 NOVEMBRE",
                 "heure": "21:00",
