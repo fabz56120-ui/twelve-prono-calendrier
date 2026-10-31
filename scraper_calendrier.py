@@ -168,7 +168,8 @@ def extraire_matchs(texte, numero):
 
         match = {
             "id": creer_match_id(
-                f"J{numero}", domicile, exterieur, date_actuelle or ""
+                f"J{numero}", domicile, exterieur,
+                date_actuelle or ""
             ),
             "journee": f"J{numero}",
             "date": date_actuelle,
@@ -268,10 +269,6 @@ def cle_match_ordonnee(match):
 
 
 def fusionner_calendrier(ancien, nouveau):
-    """
-    Fusionne les nouvelles données sans effacer les matchs
-    et les scores déjà présents.
-    """
     resultat = {
         "source": nouveau.get("source", ancien.get("source", BASE_URL)),
         "saison": nouveau.get("saison", ancien.get("saison", "2026-2027")),
@@ -283,7 +280,13 @@ def fusionner_calendrier(ancien, nouveau):
         | set(nouveau.get("journees", {}))
     )
 
-    for journee in toutes_journees:
+    def numero_journee(nom):
+        correspondance = re.fullmatch(r"J(\d+)", nom)
+        return int(correspondance.group(1)) if correspondance else 10**9
+
+    # Tri numérique : J1, J2, J3... J30.
+    for journee in sorted(toutes_journees, key=numero_journee):
+
         anciens_matchs = ancien.get("journees", {}).get(journee, []) or []
         nouveaux_matchs = nouveau.get("journees", {}).get(journee, []) or []
 
@@ -301,12 +304,11 @@ def fusionner_calendrier(ancien, nouveau):
             match = dict(ancien_match)
             match.update(nouveau_match)
 
-            # Conserver l'identifiant historique.
+            # Conservation de l'identifiant historique.
             if ancien_match.get("id"):
                 match["id"] = ancien_match["id"]
 
-            # Ne pas effacer les anciennes données si la récupération
-            # ne fournit aucune valeur.
+            # Ne pas effacer les anciennes données.
             for champ in (
                 "date", "heure", "scoreDomicile", "scoreExterieur"
             ):
@@ -319,7 +321,7 @@ def fusionner_calendrier(ancien, nouveau):
             fusionnes.append(match)
             cles_vues.add(cle)
 
-        # Conserver les matchs absents d'une extraction partielle.
+        # Conservation des matchs absents d'une extraction partielle.
         for ancien_match in anciens_matchs:
             cle = cle_match_ordonnee(ancien_match)
 
@@ -371,10 +373,10 @@ def main():
         with open("calendrier.json", "r", encoding="utf-8") as fichier:
             ancien_calendrier = json.load(fichier)
 
-        print("✓ Ancien calendrier chargé pour préserver les données")
+        print("✓ Ancien calendrier chargé pour préserver les données existantes")
 
     except (FileNotFoundError, json.JSONDecodeError):
-        print("ℹ Aucun calendrier précédent exploitable")
+        print("ℹ Aucun calendrier précédent exploitable : création initiale")
 
     calendrier_brut = {
         "source": BASE_URL,
@@ -417,7 +419,9 @@ def main():
                 print(f"✓ {len(matchs)} match(s)")
 
             except Exception as erreur:
-                print(f"⚠ Première tentative échouée pour J{numero}: {erreur}")
+                print(
+                    f"⚠ Première tentative échouée pour J{numero}: {erreur}"
+                )
 
                 try:
                     page.goto(
@@ -435,17 +439,23 @@ def main():
                     texte = page.locator("body").inner_text()
 
                     with open(
-                        f"debug_J{numero}.txt", "w", encoding="utf-8"
+                        f"debug_J{numero}.txt",
+                        "w",
+                        encoding="utf-8"
                     ) as f:
                         f.write(texte)
 
                     matchs = extraire_matchs(texte, numero)
                     calendrier_brut["journees"][f"J{numero}"] = matchs
 
-                    print(f"✓ Deuxième tentative : {len(matchs)} match(s)")
+                    print(
+                        f"✓ Deuxième tentative : {len(matchs)} match(s)"
+                    )
 
                 except Exception as seconde_erreur:
-                    print(f"⚠ Échec définitif J{numero}: {seconde_erreur}")
+                    print(
+                        f"⚠ Échec définitif J{numero}: {seconde_erreur}"
+                    )
                     calendrier_brut["journees"][f"J{numero}"] = []
 
         print("\n===== Complément des heures avec Rugbyrama =====")
