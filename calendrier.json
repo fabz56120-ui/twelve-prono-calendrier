@@ -758,8 +758,8 @@
                 "heure": "19:10",
                 "domicile": "CA Brive",
                 "exterieur": "US Dax",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 71,
+                "scoreExterieur": 28
             },
             {
                 "id": "J10_STADE_AURILLACOIS_US_MONTAUBAN_JEUDI_05_NOVEMBRE",
@@ -768,8 +768,8 @@
                 "heure": "19:30",
                 "domicile": "Stade Aurillacois",
                 "exterieur": "US Montauban",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 60,
+                "scoreExterieur": 8
             },
             {
                 "id": "J10_COLOMIERS_RUGBY_AS_BEZIERS_HERAULT_JEUDI_05_NOVEMBRE",
@@ -778,8 +778,8 @@
                 "heure": "19:30",
                 "domicile": "Colomiers Rugby",
                 "exterieur": "AS Béziers Hérault",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 53,
+                "scoreExterieur": 19
             },
             {
                 "id": "J10_RC_NARBONNAIS_NISSA_RUGBY_JEUDI_05_NOVEMBRE",
@@ -788,8 +788,8 @@
                 "heure": "19:30",
                 "domicile": "RC Narbonnais",
                 "exterieur": "Nissa Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 26,
+                "scoreExterieur": 29
             },
             {
                 "id": "J10_VALENCE_ROMANS_USON_NEVERS_JEUDI_05_NOVEMBRE",
@@ -798,8 +798,8 @@
                 "heure": "19:30",
                 "domicile": "Valence Romans",
                 "exterieur": "USON Nevers",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 46,
+                "scoreExterieur": 12
             },
             {
                 "id": "J10_SOYAUX_ANGOULEME_XV_FC_GRENOBLE_RUGBY_JEUDI_05_NOVEMBRE",
@@ -808,8 +808,8 @@
                 "heure": "21:00",
                 "domicile": "Soyaux-Angoulême XV",
                 "exterieur": "FC Grenoble Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 30,
+                "scoreExterieur": 24
             },
             {
                 "id": "J10_PROVENCE_RUGBY_OYONNAX_RUGBY_JEUDI_05_NOVEMBRE",
@@ -818,8 +818,8 @@
                 "heure": "21:05",
                 "domicile": "Provence Rugby",
                 "exterieur": "Oyonnax Rugby",
-                "scoreDomicile": null,
-                "scoreExterieur": null
+                "scoreDomicile": 32,
+                "scoreExterieur": 23
             }
         ],
         "J11": [
